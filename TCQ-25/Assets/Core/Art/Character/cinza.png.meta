@@ -136,11 +136,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cinza_0
+      name: Idle1
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -158,11 +158,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_1
+      name: Idle2
       rect:
         serializedVersion: 2
         x: 64
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -180,11 +180,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_2
+      name: Idle3
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -202,11 +202,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_3
+      name: Idle4
       rect:
         serializedVersion: 2
         x: 192
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -224,11 +224,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_4
+      name: Idle5
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -246,11 +246,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_5
+      name: Idle6
       rect:
         serializedVersion: 2
         x: 320
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -268,11 +268,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_6
+      name: Idle7
       rect:
         serializedVersion: 2
         x: 384
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -290,11 +290,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_7
+      name: Idle8
       rect:
         serializedVersion: 2
         x: 448
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -312,11 +312,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_8
+      name: Idle9
       rect:
         serializedVersion: 2
         x: 512
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -334,11 +334,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_9
+      name: Idle10
       rect:
         serializedVersion: 2
         x: 576
-        y: 256
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -356,10 +356,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_10
+      name: Walk1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 0
         y: 256
         width: 64
         height: 64
@@ -378,11 +378,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_11
+      name: Walk2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 64
+        y: 256
         width: 64
         height: 64
       alignment: 7
@@ -400,11 +400,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_12
+      name: Walk3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 128
+        y: 256
         width: 64
         height: 64
       alignment: 7
@@ -422,11 +422,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_13
+      name: Walk4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
+        x: 192
+        y: 256
         width: 64
         height: 64
       alignment: 7
@@ -444,10 +444,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_14
+      name: CrouchIdle1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 0
         y: 192
         width: 64
         height: 64
@@ -466,11 +466,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_15
+      name: CrouchIdle2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -488,11 +488,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_16
+      name: CrouchIdle3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 128
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -510,11 +510,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_17
+      name: CrouchIdle4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 192
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -532,11 +532,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_18
+      name: CrouchIdle5
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 256
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -554,77 +554,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4479b9fe149abd242bb9396f3ae2ca60
-      internalID: 1298224516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_20
+      name: CrouchWalk2
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6de610778872f594fa3783bed49c9047
-      internalID: 875764976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc90dd0ee9cc88648a2f9f777ec354e5
-      internalID: -805737258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
+        y: 128
         width: 64
         height: 64
       alignment: 7
@@ -642,11 +576,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_23
+      name: CrouchWalk3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 128
+        y: 128
         width: 64
         height: 64
       alignment: 7
@@ -664,11 +598,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_24
+      name: CrouchWalk4
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
+        x: 192
+        y: 128
         width: 64
         height: 64
       alignment: 7
@@ -686,10 +620,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_25
+      name: Jump1
       rect:
         serializedVersion: 2
-        x: 384
+        x: 0
         y: 64
         width: 64
         height: 64
@@ -708,11 +642,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_26
+      name: Jump2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 64
+        y: 64
         width: 64
         height: 64
       alignment: 7
@@ -730,11 +664,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_27
+      name: Jump3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 128
+        y: 64
         width: 64
         height: 64
       alignment: 7
@@ -752,32 +686,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_28
+      name: Hit1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22e95b8607804134aba857edc4b4d27a
-      internalID: -1323893036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_29
-      rect:
-        serializedVersion: 2
-        x: 192
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -796,10 +708,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_30
+      name: Hit2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -818,7 +730,51 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_31
+      name: Hit3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac093b4e4ee2e242b13f3af21340d9f
+      internalID: 72317065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2d9b7e76f0c24408fbb271a1d46d6b
+      internalID: -2017520315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit5
       rect:
         serializedVersion: 2
         x: 320
@@ -833,8 +789,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac093b4e4ee2e242b13f3af21340d9f
-      internalID: 72317065
+      spriteID: 1b50382adc829dd439d1b39f78310036
+      internalID: -885862400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e419c0256c2c88d4b9037cf545bdea5e
+      internalID: 1298224516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e450350e6f5934a4b919a7861aed869d
+      internalID: 875764976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7389131b76a0346a8aeaabc04e396e
+      internalID: -805737258
       vertices: []
       indices: 
       edges: []
@@ -855,6 +877,39 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      CrouchIdle1: 180738365
+      CrouchIdle2: 1432029192
+      CrouchIdle3: 314883386
+      CrouchIdle4: -1118117331
+      CrouchIdle5: -1875115450
+      CrouchIdle6: 1298224516
+      CrouchIdle7: 875764976
+      CrouchWalk1: -805737258
+      CrouchWalk2: 784182519
+      CrouchWalk3: -1591709846
+      CrouchWalk4: -1498466155
+      Hit1: 1305801302
+      Hit2: 1755453334
+      Hit3: 72317065
+      Hit4: -2017520315
+      Hit5: -885862400
+      Idle1: -1312305777
+      Idle10: -1190190299
+      Idle2: 2100552908
+      Idle3: 1416483329
+      Idle4: 33494199
+      Idle5: 809358113
+      Idle6: -866170009
+      Idle7: 25061733
+      Idle8: -274886230
+      Idle9: -471355407
+      Jump1: -228708269
+      Jump2: -1037030980
+      Jump3: -1123793784
+      Walk1: 1842256930
+      Walk2: -1636264339
+      Walk3: 802456767
+      Walk4: -776675343
       cinza_0: -1312305777
       cinza_1: 2100552908
       cinza_10: 1842256930
@@ -881,6 +936,8 @@ TextureImporter:
       cinza_3: 33494199
       cinza_30: 1755453334
       cinza_31: 72317065
+      cinza_32: -2017520315
+      cinza_33: -885862400
       cinza_4: 809358113
       cinza_5: -866170009
       cinza_6: 25061733

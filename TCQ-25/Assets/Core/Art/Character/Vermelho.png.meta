@@ -136,11 +136,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vermelho_0
+      name: Idle1
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -151,18 +151,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f6fd034f259c5b40a43cda8564dba8b
-      internalID: -685058431
+      spriteID: 3f9c8f2dd07e05e4089d2afd54b1e3a0
+      internalID: 514281519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_1
+      name: Idle2
       rect:
         serializedVersion: 2
         x: 64
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -173,18 +173,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a8501422d8ec8e4e95ea060830072cb
-      internalID: -220048647
+      spriteID: dd5997e2e1ae4c147a9a0119b3daf443
+      internalID: 1816921495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_2
+      name: Idle3
       rect:
         serializedVersion: 2
         x: 128
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -195,18 +195,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5131c422103650947842297cfe60cac7
-      internalID: -77721980
+      spriteID: d0825b81ce4efb347ac146ece17c1e15
+      internalID: 1054493936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_3
+      name: Idle4
       rect:
         serializedVersion: 2
         x: 192
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -217,18 +217,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a3535a71f150e94f94ff926ba11f778
-      internalID: -421447772
+      spriteID: 9214b47e40adc934dbbe40b41d0379e8
+      internalID: -1576839887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_4
+      name: Idle5
       rect:
         serializedVersion: 2
         x: 256
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -239,18 +239,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffc9664cc88194b4e8ee5cec0f78d8b7
-      internalID: 1314475945
+      spriteID: ef715b94036a048439cf568affc51c97
+      internalID: 96792726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_5
+      name: Idle6
       rect:
         serializedVersion: 2
         x: 320
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -261,18 +261,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 541c1c581ee2ae04bbb15b22d2183a85
-      internalID: -995210062
+      spriteID: dd1fe7cf0fb99e74f980de0d0ac84782
+      internalID: 1126443010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_6
+      name: Idle7
       rect:
         serializedVersion: 2
         x: 384
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -283,18 +283,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31fc9fc9d6f83f344b96a9106149255b
-      internalID: 931351224
+      spriteID: d9ea90ecddcd09d4d99383c707e2aec6
+      internalID: -1907270715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_7
+      name: Idle8
       rect:
         serializedVersion: 2
         x: 448
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -305,18 +305,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7146bac41309e854a97abe0f975352fe
-      internalID: -884977455
+      spriteID: 704fd856880bfd248a95a3cb77fa5d22
+      internalID: -1465291676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_8
+      name: Idle9
       rect:
         serializedVersion: 2
         x: 512
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -327,17 +327,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8012cb39cc83d16419a9b5ddb1d5643a
-      internalID: 1922093978
+      spriteID: f21988d615cd2c142a58e1e49aac8651
+      internalID: 1311267361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_9
+      name: Idle10
       rect:
         serializedVersion: 2
         x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea075d55a80ae9f40bc7d5bd33cd241b
+      internalID: 1919071839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk1
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 384
         width: 64
         height: 64
@@ -349,17 +371,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 158b30874b130544d9fb24846a3311b0
-      internalID: -1045185586
+      spriteID: 2e415d506abce024a980c6377c0b2567
+      internalID: 677750009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_10
+      name: Walk2
       rect:
         serializedVersion: 2
-        x: 640
+        x: 64
         y: 384
         width: 64
         height: 64
@@ -371,14 +393,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9324d42f8860b0f479637b3413aa49b2
-      internalID: -580147785
+      spriteID: e8891465714c8f540b2e2c2238b5fc87
+      internalID: 1296497658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_11
+      name: Walk3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a46e482324930c42ad35b49eeb9bd3e
+      internalID: 1009484833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7443f8532e21748b6ce339189c379f
+      internalID: 1214750505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle1
       rect:
         serializedVersion: 2
         x: 0
@@ -393,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e146cc6504f44324c8633a3b4cbd8fb0
-      internalID: 1619062878
+      spriteID: dcf9069a3afa0d447b5eec1839d632da
+      internalID: 1719556322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_12
+      name: CrouchIdle2
       rect:
         serializedVersion: 2
         x: 64
@@ -415,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e58a55e18bf2e64c99a8aad42cc233f
-      internalID: -2018662308
+      spriteID: cb11712e890a4f049bd0154d7c6a73d2
+      internalID: 952142302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_13
+      name: CrouchIdle3
       rect:
         serializedVersion: 2
         x: 128
@@ -437,14 +503,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 133aa1ee690da5e43af07673805b91a8
-      internalID: -1406496556
+      spriteID: 4223b008c0f86a9478dcc25272a818d6
+      internalID: 1750381524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_14
+      name: CrouchIdle4
       rect:
         serializedVersion: 2
         x: 192
@@ -459,194 +525,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e09908320889c4d9fcb613bc01ad39
-      internalID: 1982063845
+      spriteID: 5db6396834d32b6429be6f2b98f4637b
+      internalID: -585809519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a96ba226876a95b4ba6984654769f906
-      internalID: -853395839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2765144bec71db34499adf8c93015cc1
-      internalID: -165617127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_17
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b35f5e056b3e544094826587abb8d17
-      internalID: -602036054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_18
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf620a58caa3a1a44a57de6eba31e9af
-      internalID: -588001313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ded3f592390ddef4292f7a04373c5d30
-      internalID: -930803533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_20
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d43d740bd57cf4439979f52dff07372
-      internalID: -1945914592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e445c23ca213489459983f2b41428d27
-      internalID: -66613775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3731eae46e948f4390d7edcfb213058
-      internalID: -1512210333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_23
+      name: CrouchIdle5
       rect:
         serializedVersion: 2
         x: 256
-        y: 192
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -657,18 +547,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b302f7527e1cf54fb4d3210333448c5
-      internalID: 707917906
+      spriteID: 7854baf12246c274599cb9e8593817af
+      internalID: -1463797275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_24
+      name: CrouchIdle6
       rect:
         serializedVersion: 2
         x: 320
-        y: 192
+        y: 320
         width: 64
         height: 64
       alignment: 7
@@ -679,17 +569,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a33e832cff08a5e4e9023dda547fd536
-      internalID: 453814414
+      spriteID: b69c2135bbff4ad48914f0b587108264
+      internalID: 1739263572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_25
+      name: CrouchIdle7
       rect:
         serializedVersion: 2
         x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d22302bfa417149bb203c826165f50
+      internalID: 488210831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff78d7faab4af74996a032b3d909e66
+      internalID: -2008467330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e14e8a9c4764e344899fb124023a162
+      internalID: 367495751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2c9a7b629b4e14b82313d56a1297e6
+      internalID: -408793373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8243a34c23732d41b6bd518eaaad1e6
+      internalID: -1443921596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump1
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 192
         width: 64
         height: 64
@@ -701,18 +701,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d28fe618dbd4a45831467c873aab18
-      internalID: 1212479926
+      spriteID: cdc2d439535fd0341bcb6ae44c4d48bc
+      internalID: -750758624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_26
+      name: Jump2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -723,14 +723,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eee0b8f9d5b88540b3452caed72441f
-      internalID: -395809120
+      spriteID: 72e4b4a7a6533454e9ee3a0d445208a9
+      internalID: -1969412061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_27
+      name: Jump3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9ebbe643f4f5c4b9995648793672d8
+      internalID: 979304799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melee1
       rect:
         serializedVersion: 2
         x: 64
@@ -745,14 +767,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27b5cc4dd2bd3643bfc47affd056d38
-      internalID: 1226150350
+      spriteID: 7e91a4cfa4dc9324eafadb4f1712e572
+      internalID: 872090758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_28
+      name: Melee2
       rect:
         serializedVersion: 2
         x: 128
@@ -767,14 +789,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3f665a5636980b4fac32713bf028cbb
-      internalID: 1145566472
+      spriteID: f0b5549d41cf1704cab368df7a60cc77
+      internalID: 945243068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_29
+      name: Melee3
       rect:
         serializedVersion: 2
         x: 192
@@ -789,36 +811,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 281a4d7f6fbe29c4dbf7402e4ccd7eb3
-      internalID: -538991991
+      spriteID: 78af46968910dbe459b313295b180c2b
+      internalID: -1374892033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_30
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ce39d8b12cfa244d8c55e8a2def08c7
-      internalID: -977202728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_31
+      name: Shoot1
       rect:
         serializedVersion: 2
         x: 64
@@ -833,14 +833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d96f7a158bf52d40b69d24baae43e84
-      internalID: -1801241778
+      spriteID: 2169731bc99794c45beaf7616e167992
+      internalID: 2063666601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_32
+      name: Shoot2
       rect:
         serializedVersion: 2
         x: 128
@@ -855,36 +855,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 278eac3ab4f1d1846ad0835f1511ec5a
-      internalID: 1884958334
+      spriteID: f71e0eaab1329294e8ed72cc35be377f
+      internalID: -886815523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_33
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9f01f5376f0a1f4ba597ea882dc30e6
-      internalID: -461024260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vermelho_34
+      name: Hit1
       rect:
         serializedVersion: 2
         x: 64
@@ -899,14 +877,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40e211cfaa7bdab43a7c6dec4dd82263
-      internalID: -2147267787
+      spriteID: da54bcd2ded0ba54a8d165c4c3f6ac6f
+      internalID: -1671090054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_35
+      name: Hit2
       rect:
         serializedVersion: 2
         x: 128
@@ -921,14 +899,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8afbe8fd9f0fe14eb6572b9d349b57b
-      internalID: 794345839
+      spriteID: b29b0ce4d9dc197478dc6c16a01a1c7d
+      internalID: -1617416413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_36
+      name: Hit3
       rect:
         serializedVersion: 2
         x: 192
@@ -943,14 +921,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 517e67805b317594c8d52fe65b7db4e9
-      internalID: -387582515
+      spriteID: 9faf33cfb23896541b6f90ee9b5885d0
+      internalID: -1900303006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_37
+      name: Hit4
       rect:
         serializedVersion: 2
         x: 256
@@ -965,14 +943,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4815508c55358e8458a31450abd15fd2
-      internalID: -1610966798
+      spriteID: 4b3da30599380e14488205842a09067a
+      internalID: 1034449371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vermelho_38
+      name: Hit5
       rect:
         serializedVersion: 2
         x: 320
@@ -987,8 +965,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e30d49a939dce649b77355ee04c51a7
-      internalID: -1433195164
+      spriteID: 4a997fd547623b9478941fe58253b555
+      internalID: -217534893
       vertices: []
       indices: 
       edges: []
@@ -1007,47 +985,88 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Vermelho_0: -685058431
-      Vermelho_1: -220048647
-      Vermelho_10: -580147785
-      Vermelho_11: 1619062878
-      Vermelho_12: -2018662308
-      Vermelho_13: -1406496556
-      Vermelho_14: 1982063845
-      Vermelho_15: -853395839
-      Vermelho_16: -165617127
-      Vermelho_17: -602036054
-      Vermelho_18: -588001313
-      Vermelho_19: -930803533
-      Vermelho_2: -77721980
-      Vermelho_20: -1945914592
-      Vermelho_21: -66613775
-      Vermelho_22: -1512210333
-      Vermelho_23: 707917906
-      Vermelho_24: 453814414
-      Vermelho_25: 1212479926
-      Vermelho_26: -395809120
-      Vermelho_27: 1226150350
-      Vermelho_28: 1145566472
-      Vermelho_29: -538991991
-      Vermelho_3: -421447772
-      Vermelho_30: -977202728
-      Vermelho_31: -1801241778
-      Vermelho_32: 1884958334
-      Vermelho_33: -461024260
-      Vermelho_34: -2147267787
-      Vermelho_35: 794345839
-      Vermelho_36: -387582515
-      Vermelho_37: -1610966798
-      Vermelho_38: -1433195164
-      Vermelho_4: 1314475945
-      Vermelho_5: -995210062
-      Vermelho_6: 931351224
-      Vermelho_7: -884977455
-      Vermelho_8: 1922093978
-      Vermelho_9: -1045185586
+      CrouchIdle1: 1719556322
+      CrouchIdle2: 952142302
+      CrouchIdle3: 1750381524
+      CrouchIdle4: -585809519
+      CrouchIdle5: -1463797275
+      CrouchIdle6: 1739263572
+      CrouchIdle7: 488210831
+      CrouchWalk1: -2008467330
+      CrouchWalk2: 367495751
+      CrouchWalk3: -408793373
+      CrouchWalk4: -1443921596
+      Hit1: -1671090054
+      Hit2: -1617416413
+      Hit3: -1900303006
+      Hit4: 1034449371
+      Hit5: -217534893
+      Idle1: 514281519
+      Idle10: 1919071839
+      Idle2: 1816921495
+      Idle3: 1054493936
+      Idle4: -1576839887
+      Idle5: 96792726
+      Idle6: 1126443010
+      Idle7: -1907270715
+      Idle8: -1465291676
+      Idle9: 1311267361
+      Jump1: -750758624
+      Jump2: -1969412061
+      Jump3: 979304799
+      Melee1: 872090758
+      Melee2: 945243068
+      Melee3: -1374892033
+      Shoot1: 2063666601
+      Shoot2: -886815523
+      Vermelho_0: 514281519
+      Vermelho_1: 1816921495
+      Vermelho_10: -894170228
+      Vermelho_11: 677750009
+      Vermelho_12: 1296497658
+      Vermelho_13: 1009484833
+      Vermelho_14: 1214750505
+      Vermelho_15: 1719556322
+      Vermelho_16: 952142302
+      Vermelho_17: 1750381524
+      Vermelho_18: -585809519
+      Vermelho_19: -1463797275
+      Vermelho_2: 1054493936
+      Vermelho_20: 1739263572
+      Vermelho_21: 488210831
+      Vermelho_22: -2008467330
+      Vermelho_23: 367495751
+      Vermelho_24: -408793373
+      Vermelho_25: -1443921596
+      Vermelho_26: -750758624
+      Vermelho_27: -1969412061
+      Vermelho_28: 979304799
+      Vermelho_29: 641959354
+      Vermelho_3: -1576839887
+      Vermelho_30: 872090758
+      Vermelho_31: 945243068
+      Vermelho_32: -1374892033
+      Vermelho_33: -520570228
+      Vermelho_34: 2063666601
+      Vermelho_35: -886815523
+      Vermelho_36: -1512739554
+      Vermelho_37: -1671090054
+      Vermelho_38: -1617416413
+      Vermelho_39: -1900303006
+      Vermelho_4: 96792726
+      Vermelho_40: 1034449371
+      Vermelho_41: -217534893
+      Vermelho_5: 1126443010
+      Vermelho_6: -1907270715
+      Vermelho_7: -1465291676
+      Vermelho_8: 1311267361
+      Vermelho_9: 1919071839
+      Walk1: 677750009
+      Walk2: 1296497658
+      Walk3: 1009484833
+      Walk4: 1214750505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

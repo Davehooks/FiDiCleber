@@ -136,143 +136,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6284f8df2076e974497454e55b885f39
-      internalID: -232096003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37611344089165b41ac1820b099c2bea
-      internalID: 1192195794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38d6a4d103e7b8248a21b8f240f0b048
-      internalID: 1816289443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45e985084f4589d4599ebce8ed5161b9
-      internalID: 1450244223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e30ddccf2b211c944836f2dd9b183365
-      internalID: -541028935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 448
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f6458199c7dec74dba5799885b3d2c4
-      internalID: -2098036676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_6
+      name: Idle7
       rect:
         serializedVersion: 2
         x: 384
-        y: 448
+        y: 512
         width: 64
         height: 64
       alignment: 7
@@ -290,11 +158,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_7
+      name: Idle8
       rect:
         serializedVersion: 2
         x: 448
-        y: 448
+        y: 512
         width: 64
         height: 64
       alignment: 7
@@ -312,11 +180,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_8
+      name: Idle9
       rect:
         serializedVersion: 2
         x: 512
-        y: 448
+        y: 512
         width: 64
         height: 64
       alignment: 7
@@ -334,11 +202,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_9
+      name: Idle10
       rect:
         serializedVersion: 2
         x: 576
-        y: 448
+        y: 512
         width: 64
         height: 64
       alignment: 7
@@ -356,11 +224,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_10
+      name: Walk1
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -378,11 +246,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_11
+      name: Walk2
       rect:
         serializedVersion: 2
         x: 64
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -400,11 +268,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_12
+      name: Walk3
       rect:
         serializedVersion: 2
         x: 128
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -422,11 +290,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_13
+      name: Walk4
       rect:
         serializedVersion: 2
         x: 192
-        y: 384
+        y: 448
         width: 64
         height: 64
       alignment: 7
@@ -444,11 +312,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_14
+      name: CrouchIdle1
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 7
@@ -466,11 +334,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_15
+      name: CrouchIdle2
       rect:
         serializedVersion: 2
         x: 64
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 7
@@ -488,11 +356,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_16
+      name: CrouchIdle3
       rect:
         serializedVersion: 2
         x: 128
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 7
@@ -510,11 +378,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_17
+      name: CrouchIdle4
       rect:
         serializedVersion: 2
         x: 192
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 7
@@ -532,76 +400,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_18
+      name: CrouchWalk4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cf670a21fcec864f9bc4ce7b931fb04
-      internalID: -8095287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_19
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 320
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a7c833f28fb8e0488dc345bb5153dbf
-      internalID: -1015165806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_20
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 320
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 656cea9852500b5438cc17ce70ddcc25
-      internalID: -69308405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_21
-      rect:
-        serializedVersion: 2
-        x: 448
+        x: 192
         y: 320
         width: 64
         height: 64
@@ -620,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_22
+      name: Jump1
       rect:
         serializedVersion: 2
         x: 0
@@ -642,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_23
+      name: Jump2
       rect:
         serializedVersion: 2
         x: 64
@@ -664,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_24
+      name: Jump3
       rect:
         serializedVersion: 2
         x: 128
@@ -686,11 +488,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_25
+      name: Defense1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 0
+        y: 192
         width: 64
         height: 64
       alignment: 7
@@ -708,10 +510,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_26
+      name: Defense2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 192
         width: 64
         height: 64
@@ -730,10 +532,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_27
+      name: Defense3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 192
         width: 64
         height: 64
@@ -752,10 +554,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_28
+      name: Defense4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 192
         width: 64
         height: 64
@@ -774,10 +576,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_29
+      name: Defense5
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 192
         width: 64
         height: 64
@@ -796,11 +598,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_30
+      name: Stun1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 0
+        y: 128
         width: 64
         height: 64
       alignment: 7
@@ -818,10 +620,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_31
+      name: Stun2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 128
         width: 64
         height: 64
@@ -840,10 +642,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_32
+      name: Stun3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 128
         width: 64
         height: 64
@@ -862,10 +664,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_33
+      name: Stun4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 128
         width: 64
         height: 64
@@ -884,10 +686,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_34
+      name: Stun5
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 128
         width: 64
         height: 64
@@ -906,33 +708,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_35
+      name: Reflect1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee456d6de31204849a1430f98bd32c13
-      internalID: -1444209387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_36
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
+        x: 64
+        y: 64
         width: 64
         height: 64
       alignment: 7
@@ -950,10 +730,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_37
+      name: Reflect2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 128
         y: 64
         width: 64
         height: 64
@@ -972,33 +752,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_38
+      name: Hit2
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6230cb101a7be94dabf0593d4c276cf
-      internalID: -1394245877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueSheet_39
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
+        y: 0
         width: 64
         height: 64
       alignment: 7
@@ -1016,10 +774,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_40
+      name: Hit3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -1038,10 +796,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_41
+      name: Hit4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 192
         y: 0
         width: 64
         height: 64
@@ -1060,10 +818,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_42
+      name: Hit5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 256
         y: 0
         width: 64
         height: 64
@@ -1082,11 +840,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_43
+      name: Idle1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 0
+        y: 512
         width: 64
         height: 64
       alignment: 7
@@ -1097,17 +855,193 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52e63b242280334bb1853cf46bd1a45
-      internalID: 139208468
+      spriteID: 1abcfefe817b3af4a993ab3e333c1d54
+      internalID: 1216286620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueSheet_44
+      name: Idle2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f49a773e9393ca409cae643edbe508e
+      internalID: 1629428405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bd003994990c844abc19a0d8f88ffa
+      internalID: 1775591013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9e0c2f5aa1e624dbcb70b9d4b02bb0
+      internalID: 1441763688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle5
       rect:
         serializedVersion: 2
         x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943ed7b0f7e88a1419b8ab688b50178e
+      internalID: 1198406159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd5bb9e263bb9446897339c2fd70300
+      internalID: -341289152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b0cd33cdc010b4cbbd997dcc9818bc
+      internalID: -8095287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a12e93e4306917418f14cf48bfe87e1
+      internalID: -1015165806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalk3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d23e5cb96b7bac4baeb510bcd0478f6
+      internalID: -69308405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit1
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -1119,8 +1053,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b16663c85cc4080429756412d1d596de
-      internalID: 1076126941
+      spriteID: 8649be52a2f88ba4993064807de274ba
+      internalID: -1394245877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e42157124bf9e74387815cb6d11de43
+      internalID: 1996418104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d354057bc12695f499b0805aed0eb64d
+      internalID: 661531174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchIdle7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b016445a812084682ae9757c4f04a2
+      internalID: -221543210
       vertices: []
       indices: 
       edges: []
@@ -1139,10 +1139,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BlueSheet_0: -232096003
-      BlueSheet_1: 1192195794
+      BlueSheet_0: 1216286620
+      BlueSheet_1: 1629428405
       BlueSheet_10: -573024711
       BlueSheet_11: -1082719156
       BlueSheet_12: 326803359
@@ -1153,7 +1153,7 @@ TextureImporter:
       BlueSheet_17: 662243558
       BlueSheet_18: -8095287
       BlueSheet_19: -1015165806
-      BlueSheet_2: 1816289443
+      BlueSheet_2: 1775591013
       BlueSheet_20: -69308405
       BlueSheet_21: -1374198679
       BlueSheet_22: -109606048
@@ -1164,7 +1164,7 @@ TextureImporter:
       BlueSheet_27: 262260396
       BlueSheet_28: 29733757
       BlueSheet_29: -1334674023
-      BlueSheet_3: 1450244223
+      BlueSheet_3: 1441763688
       BlueSheet_30: -2078465801
       BlueSheet_31: -703087274
       BlueSheet_32: 1301962233
@@ -1175,17 +1175,64 @@ TextureImporter:
       BlueSheet_37: -1164836645
       BlueSheet_38: -1394245877
       BlueSheet_39: -1250172624
-      BlueSheet_4: -541028935
+      BlueSheet_4: 1198406159
       BlueSheet_40: 747821956
       BlueSheet_41: 984492538
       BlueSheet_42: 347155572
-      BlueSheet_43: 139208468
-      BlueSheet_44: 1076126941
-      BlueSheet_5: -2098036676
+      BlueSheet_43: 1996418104
+      BlueSheet_44: 661531174
+      BlueSheet_45: -221543210
+      BlueSheet_5: -341289152
       BlueSheet_6: -1402663400
       BlueSheet_7: 707674744
       BlueSheet_8: 95041957
       BlueSheet_9: -430409648
+      CrouchIdle1: -1668259336
+      CrouchIdle2: -785661788
+      CrouchIdle3: 193265795
+      CrouchIdle4: 662243558
+      CrouchIdle5: -8095287
+      CrouchIdle6: 1996418104
+      CrouchIdle7: 661531174
+      CrouchIdle8: -221543210
+      CrouchWalk1: -8095287
+      CrouchWalk2: -1015165806
+      CrouchWalk3: -69308405
+      CrouchWalk4: -1374198679
+      Defense1: 1920655951
+      Defense2: 409788265
+      Defense3: 262260396
+      Defense4: 29733757
+      Defense5: -1334674023
+      Hit1: -1394245877
+      Hit2: -1250172624
+      Hit3: 747821956
+      Hit4: 984492538
+      Hit5: 347155572
+      Idle1: 1216286620
+      Idle10: -430409648
+      Idle2: 1629428405
+      Idle3: 1775591013
+      Idle4: 1441763688
+      Idle5: 1198406159
+      Idle6: -341289152
+      Idle7: -1402663400
+      Idle8: 707674744
+      Idle9: 95041957
+      Jump1: -109606048
+      Jump2: 1873316227
+      Jump3: 1860970578
+      Reflect1: 1679055545
+      Reflect2: -1164836645
+      Stun1: -2078465801
+      Stun2: -703087274
+      Stun3: 1301962233
+      Stun4: -1770024510
+      Stun5: 1366370299
+      Walk1: -573024711
+      Walk2: -1082719156
+      Walk3: 326803359
+      Walk4: -1456675440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
