@@ -4,22 +4,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //variaveis
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private bool _isJumping = false;
+    [SerializeField] private bool _isFacingRight = false;
+
+    //componentes
     private Rigidbody2D _rb;
-    [SerializeField]
-    private enum Mode
-    {
-        Agility,
-        Defense,
-        Attack
-    }[SerializeField]Mode currentMode;
+
+    //Estados
+    [SerializeField] ModeState currentModeState;
+
     void Start()
     {
         if (_rb == null)
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        
+        currentModeState = ModeState.Normal;
     }
 
     // Update is called once per frame
@@ -36,22 +38,44 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext input)
     {
-        if (input.performed && currentMode != Mode.Agility)
+        if (input.started)
         {
-            
-            _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-        }
-        else
-        {
-        Debug.Log("Pulo com double");
-            _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-            _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+
+            if (currentModeState != ModeState.Agility)
+            {
+
+                _rb.AddForceY(_jumpForce, ForceMode2D.Force);
+            }
+            else
+            {
+                Debug.Log("Pulo com double");
+                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+            }
         }
     }
     private void Move()
     {
         _rb.linearVelocityX = moveInput.x * _speed * Time.deltaTime;
-        
+
     }
-    
+
+
+    //ENUMS
+    private enum ModeState
+    {
+        Normal,
+        Agility,
+        Defense,
+        Attack
+    }
+
+/*
+    private enum movementState
+    {
+        facingRight,
+        jumping,
+        crouching
+    }
+*/
 }
