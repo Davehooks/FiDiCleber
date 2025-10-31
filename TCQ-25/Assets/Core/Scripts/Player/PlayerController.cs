@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _impulseJump = 2f;
     [SerializeField] private bool _isJumping = false;
     [SerializeField] private bool _isFacingRight = false;
 
@@ -43,14 +44,13 @@ public class PlayerController : MonoBehaviour
 
             if (currentModeState != ModeState.Agility)
             {
-
-                _rb.AddForceY(_jumpForce, ForceMode2D.Force);
+                
+                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
             }
             else
             {
                 Debug.Log("Pulo com double");
-                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+                _rb.AddForceY(_jumpForce + _impulseJump, ForceMode2D.Impulse);
             }
         }
     }

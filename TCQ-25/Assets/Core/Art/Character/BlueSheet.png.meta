@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3f704dd8b43cdc468c6188bd15fe20b
+guid: fd6a551b694a15b4181e9fe2b4a3e087
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,9 +46,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,705 +136,991 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cinza_0
+      name: BlueSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b96e800ca41d6649958a064eb5084d2
-      internalID: -1312305777
+      spriteID: 6284f8df2076e974497454e55b885f39
+      internalID: -232096003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_1
+      name: BlueSheet_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf3d33d39af327a46a0b8e2141d623ba
-      internalID: 2100552908
+      spriteID: 37611344089165b41ac1820b099c2bea
+      internalID: 1192195794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_2
+      name: BlueSheet_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba3d2fb5f2d855a4cb9f8c8dd8124828
-      internalID: 1416483329
+      spriteID: 38d6a4d103e7b8248a21b8f240f0b048
+      internalID: 1816289443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_3
+      name: BlueSheet_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d5580364278bac428560d4e0687eb0d
-      internalID: 33494199
+      spriteID: 45e985084f4589d4599ebce8ed5161b9
+      internalID: 1450244223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_4
+      name: BlueSheet_4
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d761e062b3f6c4f8b35f42acc94dc4
-      internalID: 809358113
+      spriteID: e30ddccf2b211c944836f2dd9b183365
+      internalID: -541028935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_5
+      name: BlueSheet_5
       rect:
         serializedVersion: 2
         x: 320
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ef96430f20e4e849a28870683458abd
-      internalID: -866170009
+      spriteID: 4f6458199c7dec74dba5799885b3d2c4
+      internalID: -2098036676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_6
+      name: BlueSheet_6
       rect:
         serializedVersion: 2
         x: 384
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 107ddcad94141dd44a51fb5d57c68ed3
-      internalID: 25061733
+      spriteID: 5ba6e9d81e0260d49bb130cbd099a921
+      internalID: -1402663400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_7
+      name: BlueSheet_7
       rect:
         serializedVersion: 2
         x: 448
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74afb4c32d0319040858312fb9d79128
-      internalID: -274886230
+      spriteID: 0aa8cb4ba9896e34283a1b3284b12c0d
+      internalID: 707674744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_8
+      name: BlueSheet_8
       rect:
         serializedVersion: 2
         x: 512
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2665f23f70fd3c944af018108a6c6dba
-      internalID: -471355407
+      spriteID: 5fc53f20b91ff994bac2914e01432c11
+      internalID: 95041957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_9
+      name: BlueSheet_9
       rect:
         serializedVersion: 2
         x: 576
-        y: 256
+        y: 448
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26013524bff1a694f8b1dc7af3e3ff63
-      internalID: -1190190299
+      spriteID: cffb7801e29fff646a0d1595c733c15d
+      internalID: -430409648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc738f18842a3414580f8dbd46874244
-      internalID: 1842256930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_11
+      name: BlueSheet_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859f7bf560babd1409b26b8f319f999b
-      internalID: -1636264339
+      spriteID: 04cbc159cb791d14484726741970aab7
+      internalID: -573024711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_12
+      name: BlueSheet_11
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af4fb587bc21ad443a30838b1f8e714d
-      internalID: 802456767
+      spriteID: 2423a04b223ff8c4f943586e716a335a
+      internalID: -1082719156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_13
+      name: BlueSheet_12
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf22edb22ab0b1a4bb2ca53483b1876a
-      internalID: -776675343
+      spriteID: b75cb310ee83bf749b422b15b4c19c99
+      internalID: 326803359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_14
+      name: BlueSheet_13
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 384
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0345174749453164abc83853b6362682
-      internalID: 180738365
+      spriteID: 5bc7c7b17e12d3544a354eda22132d9d
+      internalID: -1456675440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_15
+      name: BlueSheet_14
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbcbe46edd5880f488aaa5ff283e9ece
-      internalID: 1432029192
+      spriteID: 16f506ee901ee8444a973cb18032f0ce
+      internalID: -1668259336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_16
+      name: BlueSheet_15
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 249bfe8f5028585459b7eae2437fd65c
-      internalID: 314883386
+      spriteID: 3bc48b5c5187a0f48a79e77fe22aaff5
+      internalID: -785661788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_17
+      name: BlueSheet_16
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9767ed88f0936f45af87a845a390fc7
-      internalID: -1118117331
+      spriteID: 5c88b49ffb6f8f6418de438987815ea0
+      internalID: 193265795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_18
+      name: BlueSheet_17
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ae2ce25b66299b46b951e27dc3be903
-      internalID: -1875115450
+      spriteID: 418d02acb283be3439e1e29d656d07e4
+      internalID: 662243558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4479b9fe149abd242bb9396f3ae2ca60
-      internalID: 1298224516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_20
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6de610778872f594fa3783bed49c9047
-      internalID: 875764976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc90dd0ee9cc88648a2f9f777ec354e5
-      internalID: -805737258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81c9883f803a5f1458188bc960063716
-      internalID: 784182519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_23
+      name: BlueSheet_18
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac07d28d7eb68154085e10aa70d8c9a1
-      internalID: -1591709846
+      spriteID: 8cf670a21fcec864f9bc4ce7b931fb04
+      internalID: -8095287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_24
+      name: BlueSheet_19
       rect:
         serializedVersion: 2
         x: 320
-        y: 64
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e091af04027b824abd80c6b06d3a50d
-      internalID: -1498466155
+      spriteID: 7a7c833f28fb8e0488dc345bb5153dbf
+      internalID: -1015165806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_25
+      name: BlueSheet_20
       rect:
         serializedVersion: 2
         x: 384
-        y: 64
+        y: 320
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e26250e0e4d6b44b870325cc55e4cb4
-      internalID: -228708269
+      spriteID: 656cea9852500b5438cc17ce70ddcc25
+      internalID: -69308405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_26
+      name: BlueSheet_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c358a3708fc104c8d504a0629fe8e3
+      internalID: -1374198679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2f57fab2ce2ca41a46919e3a3b46fb
+      internalID: -109606048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9abfc566ec08e46bac502ed3636493
+      internalID: 1873316227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b465e3be28b7d469d46ae954d97771
+      internalID: 1860970578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced4c411a59917e48a2e77aa14384b33
+      internalID: 1920655951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d873e1f891dde2445af065fa8b1a01ad
+      internalID: 409788265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb209e4e5e2907e4bbada7b39f265f55
+      internalID: 262260396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6e1a76f42bfb94f9b05a31494ec0e2
+      internalID: 29733757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d1e625d1044d343a0829778876cc8a
+      internalID: -1334674023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec02d3261f7be584f9b64644309d101a
+      internalID: -2078465801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5a6c9bb4aa9dd42a108cb05775fc0f
+      internalID: -703087274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b9c4021cff88842a29c2b10ead5006
+      internalID: 1301962233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da8f8d0ee3fb53499e615264320358b
+      internalID: -1770024510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53058f7f92b9bb4f9ae08b75c7a8d14
+      internalID: 1366370299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_35
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee456d6de31204849a1430f98bd32c13
+      internalID: -1444209387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_36
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56daec69df0e09488fd7dfb178419f5
+      internalID: 1679055545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05874e3d5c378eb4ba720a0396dbff81
+      internalID: -1164836645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6230cb101a7be94dabf0593d4c276cf
+      internalID: -1394245877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0ea348f27151f43a63ae5fdac77b5a
+      internalID: -1250172624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueSheet_40
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d020eb7e368736c4e8c696d90682ac36
-      internalID: -1037030980
+      spriteID: d3ad4ae0722631f40815a9fda6cdb3f3
+      internalID: 747821956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_27
+      name: BlueSheet_41
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e98cfa9aaaead43a28298622116bb7
-      internalID: -1123793784
+      spriteID: b6c5f93b9d20a9c45ad16c6052df897d
+      internalID: 984492538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_28
+      name: BlueSheet_42
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22e95b8607804134aba857edc4b4d27a
-      internalID: -1323893036
+      spriteID: d630294ddff359b449881c92449299dd
+      internalID: 347155572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_29
+      name: BlueSheet_43
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8168663ac8f129a42b3aca5f8ca23ef4
-      internalID: 1305801302
+      spriteID: f52e63b242280334bb1853cf46bd1a45
+      internalID: 139208468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cinza_30
+      name: BlueSheet_44
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0aa25279be14e14c8acad8f598fcae7
-      internalID: 1755453334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cinza_31
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ac093b4e4ee2e242b13f3af21340d9f
-      internalID: 72317065
+      spriteID: b16663c85cc4080429756412d1d596de
+      internalID: 1076126941
       vertices: []
       indices: 
       edges: []
@@ -844,7 +1130,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -853,40 +1139,53 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      cinza_0: -1312305777
-      cinza_1: 2100552908
-      cinza_10: 1842256930
-      cinza_11: -1636264339
-      cinza_12: 802456767
-      cinza_13: -776675343
-      cinza_14: 180738365
-      cinza_15: 1432029192
-      cinza_16: 314883386
-      cinza_17: -1118117331
-      cinza_18: -1875115450
-      cinza_19: 1298224516
-      cinza_2: 1416483329
-      cinza_20: 875764976
-      cinza_21: -805737258
-      cinza_22: 784182519
-      cinza_23: -1591709846
-      cinza_24: -1498466155
-      cinza_25: -228708269
-      cinza_26: -1037030980
-      cinza_27: -1123793784
-      cinza_28: -1323893036
-      cinza_29: 1305801302
-      cinza_3: 33494199
-      cinza_30: 1755453334
-      cinza_31: 72317065
-      cinza_4: 809358113
-      cinza_5: -866170009
-      cinza_6: 25061733
-      cinza_7: -274886230
-      cinza_8: -471355407
-      cinza_9: -1190190299
+      BlueSheet_0: -232096003
+      BlueSheet_1: 1192195794
+      BlueSheet_10: -573024711
+      BlueSheet_11: -1082719156
+      BlueSheet_12: 326803359
+      BlueSheet_13: -1456675440
+      BlueSheet_14: -1668259336
+      BlueSheet_15: -785661788
+      BlueSheet_16: 193265795
+      BlueSheet_17: 662243558
+      BlueSheet_18: -8095287
+      BlueSheet_19: -1015165806
+      BlueSheet_2: 1816289443
+      BlueSheet_20: -69308405
+      BlueSheet_21: -1374198679
+      BlueSheet_22: -109606048
+      BlueSheet_23: 1873316227
+      BlueSheet_24: 1860970578
+      BlueSheet_25: 1920655951
+      BlueSheet_26: 409788265
+      BlueSheet_27: 262260396
+      BlueSheet_28: 29733757
+      BlueSheet_29: -1334674023
+      BlueSheet_3: 1450244223
+      BlueSheet_30: -2078465801
+      BlueSheet_31: -703087274
+      BlueSheet_32: 1301962233
+      BlueSheet_33: -1770024510
+      BlueSheet_34: 1366370299
+      BlueSheet_35: -1444209387
+      BlueSheet_36: 1679055545
+      BlueSheet_37: -1164836645
+      BlueSheet_38: -1394245877
+      BlueSheet_39: -1250172624
+      BlueSheet_4: -541028935
+      BlueSheet_40: 747821956
+      BlueSheet_41: 984492538
+      BlueSheet_42: 347155572
+      BlueSheet_43: 139208468
+      BlueSheet_44: 1076126941
+      BlueSheet_5: -2098036676
+      BlueSheet_6: -1402663400
+      BlueSheet_7: 707674744
+      BlueSheet_8: 95041957
+      BlueSheet_9: -430409648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
