@@ -1,4 +1,5 @@
 using System;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -174,7 +175,7 @@ public class PlayerController : MonoBehaviour
 
     private void ToCrouch()
     {
-        if (IsGrounded && !_isBeingHit)
+        if (!_isBeingHit)
         {
             _isCrouching = !_isCrouching;
             _currentAnimator.SetBool("IsCrouching", _isCrouching);
@@ -207,6 +208,17 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+        if (moveInput.x > 0f)
+        {
+            _spriteRenderer.flipX = false;
+            _isFacingRight = true;
+
+        }
+        else
+        {
+            _spriteRenderer.flipX = true;
+            _isFacingRight = false;
+        }
 
 
         _currentAnimator.SetBool("IsGrounded", IsGrounded); // mostra se t� no ch�o ou n�o
@@ -216,15 +228,6 @@ public class PlayerController : MonoBehaviour
         if (moveInput.x != 0f && IsGrounded) // t� se movendo
         {
             _currentAnimator.SetBool("IsWalking", true);
-            if (moveInput.x > 0f)
-            {
-                _spriteRenderer.flipX = false;
-            }
-            else
-            {
-                _spriteRenderer.flipX = true;
-                _isFacingRight = false;
-            }
         }
         else if (moveInput.x == 0 && IsGrounded) // n�o t� se movendo
         {
