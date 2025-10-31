@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     //variaveis
-    [Header("Movimentação")]
+    [Header("Movimentaï¿½ï¿½o")]
 
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _crouchSlow = 0.7f;
@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _impulseJump = 2f;
     [SerializeField] private bool _isGrounded = true;
+    public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
     [SerializeField] private bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
 
-
-    [Header("Animacao")]
+    //AnimaÃ§Ã£o
+    [Header("AnimaÃ§Ã£o")]
 
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
     //Estados
     [SerializeField] ModeState currentModeState;
 
+
+    //Metodos da Unity
     void Start()
     {
         if (_currentAnimator == null)
@@ -45,13 +48,13 @@ public class PlayerController : MonoBehaviour
         currentModeState = ModeState.Normal;
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         if (!_isBeingHit)
         {
-        Move();
-        AnimationFunc();
+            Move();
+            AnimationFunc();
         }
     }
 
@@ -78,22 +81,24 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext input)
     {
-        if (input.started)
+        if (input.started && IsGrounded && !_isBeingHit)
         {
 
             if (currentModeState != ModeState.Agility)
             {
-                
+                IsGrounded = false;
                 _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
             }
             else
             {
+                IsGrounded = false;
                 Debug.Log("Pulo com double");
                 _rb.AddForceY(_jumpForce + _impulseJump, ForceMode2D.Impulse);
             }
         }
     }
 
+    //Methods
     private void Move()
     {
         if (_isCrouching)
@@ -169,39 +174,23 @@ public class PlayerController : MonoBehaviour
 
     private void ToCrouch()
     {
-        if (_isGrounded && !_isBeingHit)
+        if (IsGrounded && !_isBeingHit)
         {
             _isCrouching = !_isCrouching;
             _currentAnimator.SetBool("IsCrouching", _isCrouching);
         }
     }
 
-    //ENUMS
-    private enum ModeState
-    {
-        Normal,
-        Agility,
-        Defense,
-        Attack
-    }
 
-    
 
-    /*
-        private enum movementState
-        {
-            facingRight,
-            jumping,
-            crouching
-        }
-    */
 
-    //Animação
 
-    private void AnimationFunc() 
+    //Animaï¿½ï¿½o
+    private void AnimationFunc()
     {
         //Puxa os modos do personagem e coloca na cor certa
-        switch (currentModeState) {
+        switch (currentModeState)
+        {
             case ModeState.Normal:
                 _currentAnimator.runtimeAnimatorController = _animators[0];
                 break;
@@ -216,18 +205,18 @@ public class PlayerController : MonoBehaviour
             case ModeState.Attack:
                 _currentAnimator.runtimeAnimatorController = _animators[3];
                 break;
-            }
-        
+        }
 
 
-        _currentAnimator.SetBool("IsGrounded", _isGrounded); // mostra se tá no chão ou não
-        
-        _currentAnimator.SetBool("IsCrouching", _isCrouching); // tá agachado ou não
-        
-        if (moveInput.x != 0f && _isGrounded) // tá se movendo
+
+        _currentAnimator.SetBool("IsGrounded", IsGrounded); // mostra se tï¿½ no chï¿½o ou nï¿½o
+
+        _currentAnimator.SetBool("IsCrouching", _isCrouching); // tï¿½ agachado ou nï¿½o
+
+        if (moveInput.x != 0f && IsGrounded) // tï¿½ se movendo
         {
             _currentAnimator.SetBool("IsWalking", true);
-            if (moveInput.x>0f)
+            if (moveInput.x > 0f)
             {
                 _spriteRenderer.flipX = false;
             }
@@ -237,10 +226,19 @@ public class PlayerController : MonoBehaviour
                 _isFacingRight = false;
             }
         }
-        else if (moveInput.x == 0 && _isGrounded) // não tá se movendo
+        else if (moveInput.x == 0 && IsGrounded) // nï¿½o tï¿½ se movendo
         {
             _currentAnimator.SetBool("IsWalking", false);
         }
 
+    }
+
+    //ENUMS
+    private enum ModeState
+    {
+        Normal,
+        Agility,
+        Defense,
+        Attack
     }
 }
