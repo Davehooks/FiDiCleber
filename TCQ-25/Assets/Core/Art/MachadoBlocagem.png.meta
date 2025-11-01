@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8039c89e5db5714490667d6cfeb4aee
+guid: 3da35cade7426864895000d273e1132a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChoqueBlocagem_0
+      name: MachadoBlocagem_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 13
-        height: 31
+        x: 31
+        y: 52
+        width: 512
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 266df39d440f12dd0800000000000000
-      internalID: -2512462938602744222
+      spriteID: 0d2850d909a75b410800000000000000
+      internalID: 1492233613071450832
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -171,7 +171,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChoqueBlocagem_0: -2512462938602744222
+      MachadoBlocagem_0: 1492233613071450832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
