@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
             _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         if (_rb == null)
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        currentModeState = ModeState.Normal;
+        //currentModeState = ModeState.Normal;
     }
 
 
@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
             _isFacingRight = true;
 
         }
-        else
+        else if (moveInput.x<0f)
         {
             _spriteRenderer.flipX = true;
             _isFacingRight = false;
