@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     //Animação
     [Header("Animação")]
 
+    [SerializeField] private ParticleSystem _particleJump;
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
     private SpriteRenderer _spriteRenderer;
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
             _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         if (_rb == null)
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        //currentModeState = ModeState.Normal;
+        //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
     }
 
 
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         if (input.started && IsGrounded && !_isBeingHit)
         {
+            _particleJump.Play();
 
             if (currentModeState != ModeState.Agility)
             {
@@ -210,12 +212,14 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.x > 0f)
         {
+            _particleJump.Play();
             _spriteRenderer.flipX = false;
             _isFacingRight = true;
 
         }
         else if (moveInput.x<0f)
         {
+            _particleJump.Play();
             _spriteRenderer.flipX = true;
             _isFacingRight = false;
         }
