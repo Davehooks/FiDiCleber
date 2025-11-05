@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: be15adee333bebb4984323e793e76658
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1585562834156934566
+    second: TanqueSheet_0
+  - first:
+      213: -6869179373317129004
+    second: TanqueSheet_1
+  - first:
+      213: 8699689064377776390
+    second: TanqueSheet_2
+  - first:
+      213: -8230397462973835986
+    second: TanqueSheet_3
+  - first:
+      213: -4570327607171104824
+    second: TanqueSheet_4
+  - first:
+      213: 8439662401409062023
+    second: TanqueSheet_5
+  - first:
+      213: 7434652901302170240
+    second: TanqueSheet_6
+  - first:
+      213: 2554320797697840690
+    second: TanqueSheet_7
+  - first:
+      213: -8984261218961983980
+    second: TanqueSheet_8
+  - first:
+      213: -6619835745118926658
+    second: TanqueSheet_9
+  - first:
+      213: -1804589318973729388
+    second: TanqueSheet_10
+  - first:
+      213: 7999029512154576297
+    second: TanqueSheet_11
+  - first:
+      213: -7280241075042209396
+    second: TanqueSheet_12
+  - first:
+      213: 5034090794834298224
+    second: TanqueSheet_13
+  - first:
+      213: -3972591182438274062
+    second: TanqueSheet_14
+  - first:
+      213: 8815299323232538711
+    second: TanqueSheet_15
+  - first:
+      213: 8305128175105911906
+    second: TanqueSheet_16
+  - first:
+      213: -7055437992494531960
+    second: TanqueSheet_17
+  - first:
+      213: -6604173795645386432
+    second: TanqueSheet_18
+  - first:
+      213: 5132826556458489023
+    second: TanqueSheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TanqueSheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 254
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5aa305c003fef9e0800000000000000
+      internalID: -1585562834156934566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 254
+        width: 117
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcfdf221c5cba0a0800000000000000
+      internalID: -6869179373317129004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 254
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60976927c118bb870800000000000000
+      internalID: 8699689064377776390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_3
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 254
+        width: 117
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e251b2b2d11c7cd80800000000000000
+      internalID: -8230397462973835986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_4
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 254
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfb763814fe290c0800000000000000
+      internalID: -4570327607171104824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_5
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 254
+        width: 117
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78415342d34bf1570800000000000000
+      internalID: 8439662401409062023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 134
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082717a5c613d2760800000000000000
+      internalID: 7434652901302170240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 134
+        width: 120
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2361c2d6b35c27320800000000000000
+      internalID: 2554320797697840690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 134
+        width: 113
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416f372a50e715380800000000000000
+      internalID: -8984261218961983980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8c0c4967e9124a0800000000000000
+      internalID: -6619835745118926658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 14
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4955b15539fc4f6e0800000000000000
+      internalID: -1804589318973729388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_11
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 14
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5f6dbe5f2420f60800000000000000
+      internalID: 7999029512154576297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_12
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 14
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81b6ea805367fa90800000000000000
+      internalID: -7280241075042209396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_13
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 14
+        width: 117
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0758929f7eeacd540800000000000000
+      internalID: 5034090794834298224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_14
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 14
+        width: 118
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbeae40e558ed8c0800000000000000
+      internalID: -3972591182438274062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_15
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 14
+        width: 119
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750540e670c365a70800000000000000
+      internalID: 8815299323232538711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_16
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 14
+        width: 118
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ca643a21eb14370800000000000000
+      internalID: 8305128175105911906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_17
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 4
+        width: 119
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a7192f68c061e90800000000000000
+      internalID: -7055437992494531960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 4
+        width: 119
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0411d9b5ce24954a0800000000000000
+      internalID: -6604173795645386432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanqueSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 4
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb45667ee867b3740800000000000000
+      internalID: 5132826556458489023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TanqueSheet_0: -1585562834156934566
+      TanqueSheet_1: -6869179373317129004
+      TanqueSheet_10: -1804589318973729388
+      TanqueSheet_11: 7999029512154576297
+      TanqueSheet_12: -7280241075042209396
+      TanqueSheet_13: 5034090794834298224
+      TanqueSheet_14: -3972591182438274062
+      TanqueSheet_15: 8815299323232538711
+      TanqueSheet_16: 8305128175105911906
+      TanqueSheet_17: -7055437992494531960
+      TanqueSheet_18: -6604173795645386432
+      TanqueSheet_19: 5132826556458489023
+      TanqueSheet_2: 8699689064377776390
+      TanqueSheet_3: -8230397462973835986
+      TanqueSheet_4: -4570327607171104824
+      TanqueSheet_5: 8439662401409062023
+      TanqueSheet_6: 7434652901302170240
+      TanqueSheet_7: 2554320797697840690
+      TanqueSheet_8: -8984261218961983980
+      TanqueSheet_9: -6619835745118926658
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
