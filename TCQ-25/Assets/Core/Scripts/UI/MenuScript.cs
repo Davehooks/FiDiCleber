@@ -29,21 +29,21 @@ public class MenuScript : MonoBehaviour
 
     public void IndexPlus(InputAction.CallbackContext context)
     {
-        if (!_configPanel.activeInHierarchy)
+        if (!_configPanel.activeInHierarchy && context.performed)
         {
         _indexButton = (_indexButton + 1 + _buttons.Length) % _buttons.Length;
         }
     }
     public void IndexMinus(InputAction.CallbackContext context)
     {
-        if (!_configPanel.activeInHierarchy)
+        if (!_configPanel.activeInHierarchy && context.performed)
         {
         _indexButton = (_indexButton - 1 + _buttons.Length) % _buttons.Length;
         }
     }
     public void IndexSelect(InputAction.CallbackContext context)
     {
-        if (!_configPanel.activeInHierarchy)
+        if (!_configPanel.activeInHierarchy && context.performed)
         {
             switch (_indexButton)
             {

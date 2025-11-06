@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField]private GameObject _cameraFollowGO;
     private CameraFollowObject _cameraFollowObject;
-    private float _fallSpeedYDampingChangeThreshold;
+    //private float _fallSpeedYDampingChangeThreshold;
 
 
     //componentes
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
         _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
 
-        _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
+        //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
 
 
@@ -74,17 +74,17 @@ public class PlayerController : MonoBehaviour
             TurnCheck();
         }
         //Se a gente tá caindo já depois de uma velocidade
-        if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
-        {
-            CameraManager.instance.LerpYDaping(true);
-        }
+        //if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
+        //{
+        //    CameraManager.instance.LerpYDaping(true);
+        //}
 
-        if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-        {
-            CameraManager.instance.LerpedFromPlayerFalling = false;
+        //if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+        //{
+        //    CameraManager.instance.LerpedFromPlayerFalling = false;
 
-            CameraManager.instance.LerpYDaping(false);
-        }
+        //    CameraManager.instance.LerpYDaping(false);
+        //}
 
 
 

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 29b26e464fdd31e4f93c8982e9faaa9b
+guid: 96e719091a85f7945bec5b29c986d825
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5924751402057291685
-    second: Cientista_0
-  - first:
-      213: 6259459342320900713
-    second: Cientista_1
+      213: 6744104265820592144
+    second: Espinho_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cientista_0
+      name: Espinho_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a75f1e6202f83250800000000000000
-      internalID: 5924751402057291685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cientista_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72ce5c8f69c740341819a3ccb3b3ede1
-      internalID: 929688915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cientista_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0551549fda4465489b8f415e2154653
-      internalID: 584359645
+      spriteID: 018de64191fd79d50800000000000000
+      internalID: 6744104265820592144
       vertices: []
       indices: 
       edges: []
@@ -172,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f7d61e6d571aa54ba87814b1b260997
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -180,13 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Cientista_0: 5924751402057291685
-      Cientista_1: 929688915
-      Cientista_2: 584359645
+      Espinho_0: 6744104265820592144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
