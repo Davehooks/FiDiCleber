@@ -1,4 +1,5 @@
 
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _impulseJump = 2f;
     [SerializeField] private bool _isGrounded = true;
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
-    [SerializeField] private bool _isFacingRight = false;
+    [SerializeField] public bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
@@ -28,11 +29,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _currentAnimator;
     private SpriteRenderer _spriteRenderer;
 
+    [Header("Camera")]
+    [SerializeField]private GameObject _cameraFollowGO;
+    private CameraFollowObject _cameraFollowObject;
+    //private float _fallSpeedYDampingChangeThreshold;
 
 
     //componentes
     private Rigidbody2D _rb;
 
+    [Header("Estado")]
     //Estados
     [SerializeField] ModeState currentModeState;
 
@@ -47,6 +53,10 @@ public class PlayerController : MonoBehaviour
         if (_rb == null)
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
+
+        _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
+
+        //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
 
 
@@ -57,6 +67,25 @@ public class PlayerController : MonoBehaviour
             Move();
             AnimationFunc();
         }
+        if (moveInput.x > 0 || moveInput.x < 0)
+        {
+            TurnCheck();
+        }
+        //Se a gente tá caindo já depois de uma velocidade
+        //if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
+        //{
+        //    CameraManager.instance.LerpYDaping(true);
+        //}
+
+        //if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+        //{
+        //    CameraManager.instance.LerpedFromPlayerFalling = false;
+
+        //    CameraManager.instance.LerpYDaping(false);
+        //}
+
+
+
     }
 
     //Events -- Input Player
@@ -187,6 +216,47 @@ public class PlayerController : MonoBehaviour
 
 
 
+
+    private void TurnCheck()
+    {
+        if (moveInput.x > 0 && !_isFacingRight)
+        {
+            Turn();
+
+            _cameraFollowObject.CallTurn();
+        }
+        else if (moveInput.x < 0 && _isFacingRight)
+        {
+            Turn();
+
+            _cameraFollowObject.CallTurn();
+        }
+    }
+    private void Turn()
+    {
+        if (_isFacingRight)
+        {
+            Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            _isFacingRight = !_isFacingRight;
+        }
+        else
+        {
+            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            _isFacingRight = !_isFacingRight;
+        }
+    }
+
+    //ENUMS
+    private enum ModeState
+    {
+        Normal,
+        Agility,
+        Defense,
+        Attack
+    }
+
     //Anima��o
     private void AnimationFunc()
     {
@@ -208,22 +278,6 @@ public class PlayerController : MonoBehaviour
                 _currentAnimator.runtimeAnimatorController = _animators[3];
                 break;
         }
-
-        if (moveInput.x > 0f)
-        {
-            _particleJump.Play();
-            _spriteRenderer.flipX = false;
-            _isFacingRight = true;
-
-        }
-        else if (moveInput.x<0f)
-        {
-            _particleJump.Play();
-            _spriteRenderer.flipX = true;
-            _isFacingRight = false;
-        }
-
-
         _currentAnimator.SetBool("IsGrounded", IsGrounded); // mostra se t� no ch�o ou n�o
 
         _currentAnimator.SetBool("IsCrouching", _isCrouching); // t� agachado ou n�o
@@ -237,14 +291,5 @@ public class PlayerController : MonoBehaviour
             _currentAnimator.SetBool("IsWalking", false);
         }
 
-    }
-
-    //ENUMS
-    private enum ModeState
-    {
-        Normal,
-        Agility,
-        Defense,
-        Attack
     }
 }
