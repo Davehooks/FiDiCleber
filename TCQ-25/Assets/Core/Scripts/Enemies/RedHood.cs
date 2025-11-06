@@ -24,6 +24,7 @@ public class RedHood : Enemy
             Flip();
         }
     }
+    
     protected override void OnHitAnimation(int amountDamage, GameObject source)
     {
         base.OnHitAnimation(amountDamage, source);
