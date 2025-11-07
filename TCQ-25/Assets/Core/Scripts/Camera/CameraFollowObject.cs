@@ -24,7 +24,7 @@ public class CameraFollowObject : MonoBehaviour
         LeanTween.rotateY(gameObject, DetermineEndRotation(), _flipYRotationTime).setEaseInOutSine();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.position = PlayerTransform.position;
     }

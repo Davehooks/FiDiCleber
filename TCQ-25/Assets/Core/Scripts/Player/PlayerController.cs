@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _impulseJump = 2f;
     [SerializeField] private bool _isGrounded = true;
+
+    [Header("Som")]
+    [SerializeField] private CallSFX soundScript;
+
+    [SerializeField] public bool _isFacingRight = false;
+    [SerializeField] private bool _isBeingHit = false;
+    [SerializeField] private bool _isCrouching = false;
+
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
     public int CurrentHealth { get => currentHealth; set
         {
@@ -25,11 +33,6 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
             }
         } }
-
-    [SerializeField] public bool _isFacingRight = false;
-    [SerializeField] private bool _isBeingHit = false;
-    [SerializeField] private bool _isCrouching = false;
-
 
     //Animação
     [Header("Animação")]
