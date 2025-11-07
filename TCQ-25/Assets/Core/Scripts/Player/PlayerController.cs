@@ -6,9 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
     //variaveis
     [Header("Movimenta��o")]
-
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _crouchSlow = 0.7f;
     [SerializeField] private float _speed;
@@ -16,6 +17,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _impulseJump = 2f;
     [SerializeField] private bool _isGrounded = true;
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
+    public int CurrentHealth { get => currentHealth; set
+        {
+            currentHealth = value;  
+           if(currentHealth < 0)
+             {
+                Destroy(gameObject);
+            }
+        } }
+
     [SerializeField] public bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
@@ -46,6 +56,7 @@ public class PlayerController : MonoBehaviour
     //Metodos da Unity
     void Start()
     {
+        CurrentHealth = maxHealth;
         if (_currentAnimator == null)
             _currentAnimator = GameObject.Find("Player").GetComponent<Animator>();
         if (_spriteRenderer == null)
@@ -62,6 +73,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+       
         if (!_isBeingHit)
         {
             Move();
@@ -143,6 +155,13 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void Die()
+    {
+        if(CurrentHealth < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     void Action1()
     {
         if (!_isBeingHit)
