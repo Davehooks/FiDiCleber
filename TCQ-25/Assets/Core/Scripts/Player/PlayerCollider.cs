@@ -17,9 +17,6 @@ public class PlayerCollider : MonoBehaviour
     //se tem colisão estou lidando com o corpo
     void OnCollisionEnter2D(Collision2D collision)
     {
-         Debug.Log($"PLAYER CONTROLLER: {playerController.CurrentHealth}/{10}");
-        if(collision.gameObject.CompareTag("Obstacle"))
-        playerController.CurrentHealth--;
     }
     //se tem trigger estou lidando com o pé
     void OnTriggerEnter2D(Collider2D collision)
@@ -41,7 +38,8 @@ public class PlayerCollider : MonoBehaviour
         }
         else if(enemy != null && collision.CompareTag("Obstacle"))
         {
-            Debug.Log("PLAYER COLLIDER: robozinho foi de F :(");
+            playerController.GetDamage();
+         Debug.Log($"PLAYER CONTROLLER: {playerController.CurrentHealth}/{10}");
         }
         
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))

@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _isGrounded = true;
 
     [Header("Som")]
-    [SerializeField] private CallSFX soundScript;
+    [SerializeField] private PlayerSFX soundScript;
 
     [SerializeField] public bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
         _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
+        soundScript = gameObject.GetComponent<PlayerSFX>();
 
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
@@ -157,74 +159,66 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    private void Die()
+    public void GetDamage()
     {
-        if(CurrentHealth < 0)
+        if(CurrentHealth >= 0)
         {
-            Destroy(gameObject);
+            CurrentHealth--;
+            soundScript.PlayDamage(false);
+            //TODO arremesa pro lado
+            
         }
+        else
+        {
+            soundScript.PlayDamage(true);
+            SceneManager.LoadScene("SampleScene"); 
+        } //TODO quando fizer o UIManager chamar a tela de morte
     }
     void Action1()
     {
-        if (!_isBeingHit)
+        if (!_isBeingHit && currentModeState != ModeState.Normal)
         {
             _currentAnimator.SetTrigger("Action1");
         }
-
-        if (currentModeState == ModeState.Normal)
+        if (currentModeState == ModeState.Agility) // Aqui ele dá dash
         {
-
+            soundScript.PlayDash();
 
         }
 
-        if (currentModeState == ModeState.Agility)
+        if (currentModeState == ModeState.Defense) // Aqui ele reflete
         {
-
+            soundScript.PlayReflect();
 
         }
 
-        if (currentModeState == ModeState.Defense)
+        if (currentModeState == ModeState.Attack) // Aqui ele atacaMelee
         {
-
-
-        }
-
-        if (currentModeState == ModeState.Attack)
-        {
-
+            soundScript.PlayMeleeAttack();
 
         }
 
     }
-
     void Action2()
     {
-        if (!_isBeingHit && currentModeState != ModeState.Agility)
+        if (!_isBeingHit && (currentModeState != ModeState.Agility || currentModeState != ModeState.Normal))
         {
             _currentAnimator.SetTrigger("Action2");
 
-            if (currentModeState == ModeState.Normal)
+            if (currentModeState == ModeState.Defense) // bloqueia e cria um escudo em volta
             {
-
+                soundScript.PlayBlock();
 
             }
 
-            if (currentModeState == ModeState.Defense)
+            if (currentModeState == ModeState.Attack)// atira um proj[etil da mão
             {
-
-
-            }
-
-            if (currentModeState == ModeState.Attack)
-            {
-
+                soundScript.PlayRangedAttack();
 
             }
 
         }
     }
-
     private void ToCrouch()
     {
         if (!_isBeingHit)
@@ -233,11 +227,6 @@ public class PlayerController : MonoBehaviour
             _currentAnimator.SetBool("IsCrouching", _isCrouching);
         }
     }
-
-
-
-
-
 
     private void TurnCheck()
     {
