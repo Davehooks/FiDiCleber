@@ -1,15 +1,17 @@
 
 
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
+    [Header("Player Status")]
+    [SerializeField] private GameObject _player;
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
     //variaveis
-    [Header("Movimenta��o")]
+    [Header("Movimentacao")]
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _crouchSlow = 0.7f;
     [SerializeField] private float _speed;
@@ -25,14 +27,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _isCrouching = false;
 
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
-    public int CurrentHealth { get => currentHealth; set
+    public int CurrentHealth
+    {
+        get => currentHealth; set
         {
-            currentHealth = value;  
-           if(currentHealth < 0)
-             {
-                Destroy(gameObject);
+            Debug.Log("PLAYER CONTROLLER: perdeu 1 vida");
+            if (currentHealth <= 0)
+            {
+                this.gameObject.SetActive(false);
             }
-        } }
+            else
+                currentHealth = value;
+            
+        }
+    }
 
     //Animação
     [Header("Animação")]
@@ -57,22 +65,30 @@ public class PlayerController : MonoBehaviour
 
 
     //Metodos da Unity
+    void Awake()
+    {
+        
+        CurrentHealth = maxHealth;
+    }
     void Start()
     {
-        CurrentHealth = maxHealth;
         if (_currentAnimator == null)
             _currentAnimator = GameObject.Find("Player").GetComponent<Animator>();
         if (_spriteRenderer == null)
             _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         if (_rb == null)
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
         _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
 
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
-
+    void Update()
+    {
+        Debug.Log($"PLAYER CONTROLLER: {currentHealth}/{maxHealth}");
+    }
 
     void FixedUpdate()
     {
@@ -158,13 +174,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void Die()
-    {
-        if(CurrentHealth < 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    
     void Action1()
     {
         if (!_isBeingHit)

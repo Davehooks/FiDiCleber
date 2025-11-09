@@ -49,7 +49,7 @@ public class RedHood : Enemy
     if (groundCheck != null)
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+        Gizmos.DrawLine(transform.position, groundCheck.position);
     }
 }
 

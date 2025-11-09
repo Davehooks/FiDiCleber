@@ -3052,8 +3052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6206e09ce5dca04a81d1e79ac78eff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 0
+  _player: {fileID: 0}
+  maxHealth: 3
+  currentHealth: 3
   moveInput: {x: 0, y: 0}
   _crouchSlow: 0.7
   _speed: 250
