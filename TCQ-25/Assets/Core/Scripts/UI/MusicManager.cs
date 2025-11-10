@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -33,19 +32,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
-        switch (SceneManager.GetActiveScene().ToString())
-        {
-            case "SampleScene":
-                currentMusicState = MusicState.Exploration;
-                return;
-            case "MenuScene":
-                currentMusicState=MusicState.Menu;
-                return;
-            case "Boss":
-                currentMusicState=MusicState.Battle;
-                return;
-        }
-        PlayTrack(currentMusicState);
+        
     }
     
 

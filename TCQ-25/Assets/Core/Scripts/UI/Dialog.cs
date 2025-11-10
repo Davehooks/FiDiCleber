@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +9,7 @@ public class Dialog : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private Image _profile;
     public TMP_Text _speakText;
-    private AudioSource _audioSource;
+    [SerializeField] private AudioSource _blablation;
      public GameObject _UITutorial;
 
     [Header("Configs da fala")]
@@ -23,7 +22,6 @@ public class Dialog : MonoBehaviour
     {
         _profileAnimator = _profile.GetComponent<Animator>();
         _speakIndex = 0;
-        _audioSource = _profile.GetComponent<AudioSource>();
     }
 
     private IEnumerator TypePhrase() // Faz escrever  letrinha a letrinha
@@ -33,7 +31,6 @@ public class Dialog : MonoBehaviour
         _profileAnimator.SetBool("isTalking", true);
         foreach( char letter in phrases[_speakIndex].ToCharArray())
         {
-            _audioSource.pitch = UnityEngine.Random.Range(0.0f, 1.0f); // é o que faz o baurulho de robô
             _speakText.text += letter;
             yield return new WaitForSeconds(_textSpeed);
         }
