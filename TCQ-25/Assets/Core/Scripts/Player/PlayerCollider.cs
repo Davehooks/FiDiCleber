@@ -17,6 +17,11 @@ public class PlayerCollider : MonoBehaviour
     //se tem colisão estou lidando com o corpo
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            playerController.GetDamage();
+        }
+
     }
     //se tem trigger estou lidando com o pé
     void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +49,12 @@ public class PlayerCollider : MonoBehaviour
         
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
+            PlayerSFX PlaySFX = playerController.GetComponent<PlayerSFX>();
+            if(!playerController.IsGrounded)
+            PlaySFX.PlayDrop();
+
             playerController.IsGrounded = true;
+            
         }
 
     }

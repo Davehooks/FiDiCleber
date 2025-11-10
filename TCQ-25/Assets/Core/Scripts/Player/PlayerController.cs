@@ -21,31 +21,24 @@ public class PlayerController : MonoBehaviour
     [Header("Som")]
     [SerializeField] private PlayerSFX soundScript;
 
+
+
     [SerializeField] public bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
-    public int CurrentHealth { get => currentHealth; set
-        {
-            currentHealth = value;  
-           if(currentHealth < 0)
-             {
-                Destroy(gameObject);
-            }
-        } }
+    public int CurrentHealth { get => currentHealth; set => currentHealth = value; }
+
+
 
     //Animação
     [Header("Animação")]
 
-    [SerializeField] private ParticleSystem _particleJump;
+    [SerializeField] private ParticleSystem[] _particleJump; // 0 para jump, 1 pra run, 2 para dano
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
     private SpriteRenderer _spriteRenderer;
-
-    [Header("Camera")]
-    [SerializeField]private GameObject _cameraFollowGO;
-    private CameraFollowObject _cameraFollowObject;
     //private float _fallSpeedYDampingChangeThreshold;
 
 
@@ -69,7 +62,6 @@ public class PlayerController : MonoBehaviour
             _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
-        _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
         soundScript = gameObject.GetComponent<PlayerSFX>();
 
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
@@ -88,20 +80,6 @@ public class PlayerController : MonoBehaviour
         {
             TurnCheck();
         }
-        //Se a gente tá caindo já depois de uma velocidade
-        //if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpYDaping(true);
-        //}
-
-        //if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpedFromPlayerFalling = false;
-
-        //    CameraManager.instance.LerpYDaping(false);
-        //}
-
-
 
     }
 
@@ -130,7 +108,8 @@ public class PlayerController : MonoBehaviour
     {
         if (input.started && IsGrounded && !_isBeingHit)
         {
-            _particleJump.Play();
+            _particleJump[0].Play();
+            soundScript.PlayJump();
 
             if (currentModeState != ModeState.Agility)
             {
@@ -232,15 +211,18 @@ public class PlayerController : MonoBehaviour
     {
         if (moveInput.x > 0 && !_isFacingRight)
         {
+            _particleJump[1].Play();
             Turn();
+            if(IsGrounded)
+                 _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
 
-            _cameraFollowObject.CallTurn();
         }
         else if (moveInput.x < 0 && _isFacingRight)
         {
+            _particleJump[1].Play();
             Turn();
-
-            _cameraFollowObject.CallTurn();
+            if (IsGrounded)
+                _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
         }
     }
     private void Turn()

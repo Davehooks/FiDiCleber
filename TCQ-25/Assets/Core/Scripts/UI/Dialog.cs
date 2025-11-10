@@ -33,7 +33,7 @@ public class Dialog : MonoBehaviour
         _profileAnimator.SetBool("isTalking", true);
         foreach( char letter in phrases[_speakIndex].ToCharArray())
         {
-            _audioSource.pitch = UnityEngine.Random.Range(0.0f, 1.0f);
+            _audioSource.pitch = UnityEngine.Random.Range(0.0f, 1.0f); // é o que faz o baurulho de robô
             _speakText.text += letter;
             yield return new WaitForSeconds(_textSpeed);
         }
