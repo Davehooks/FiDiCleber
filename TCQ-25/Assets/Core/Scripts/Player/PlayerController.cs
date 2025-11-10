@@ -1,17 +1,16 @@
 
 
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Player Status")]
-    [SerializeField] private GameObject _player;
+
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
     //variaveis
-    [Header("Movimentacao")]
+    [Header("Movimenta��o")]
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float _crouchSlow = 0.7f;
     [SerializeField] private float _speed;
@@ -20,39 +19,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _isGrounded = true;
 
     [Header("Som")]
-    [SerializeField] private CallSFX soundScript;
+    [SerializeField] private PlayerSFX soundScript;
 
-    [SerializeField] public bool _isFacingRight = false;
-    [SerializeField] private bool _isBeingHit = false;
+    [SerializeField] public bool _isFacingRight = true;
+    [SerializeField] public bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
-    public int CurrentHealth
-    {
-        get => currentHealth; set
-        {
-            Debug.Log("PLAYER CONTROLLER: perdeu 1 vida");
-            if (currentHealth <= 0)
-            {
-                this.gameObject.SetActive(false);
-            }
-            else
-                currentHealth = value;
-            
-        }
-    }
+    public int CurrentHealth { get => currentHealth; set => currentHealth = value; }
+
+
 
     //Animação
     [Header("Animação")]
 
-    [SerializeField] private ParticleSystem _particleJump;
+    private Animations playerAnimation;
+    [SerializeField] private ParticleSystem[] _particleJump; // 0 para jump, 1 pra run, 2 para dano
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
     private SpriteRenderer _spriteRenderer;
-
-    [Header("Camera")]
-    [SerializeField]private GameObject _cameraFollowGO;
-    private CameraFollowObject _cameraFollowObject;
     //private float _fallSpeedYDampingChangeThreshold;
 
 
@@ -65,30 +50,23 @@ public class PlayerController : MonoBehaviour
 
 
     //Metodos da Unity
-    void Awake()
-    {
-        
-        CurrentHealth = maxHealth;
-    }
     void Start()
     {
+        playerAnimation = GetComponent<Animations>();
+        CurrentHealth = maxHealth;
         if (_currentAnimator == null)
-            _currentAnimator = GameObject.Find("Player").GetComponent<Animator>();
+            _currentAnimator = GetComponent<Animator>();
         if (_spriteRenderer == null)
-            _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         if (_rb == null)
-            _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        
+            _rb = GetComponent<Rigidbody2D>();
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
-        _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
+        soundScript = gameObject.GetComponent<PlayerSFX>();
 
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
-    void Update()
-    {
-        Debug.Log($"PLAYER CONTROLLER: {currentHealth}/{maxHealth}");
-    }
+
 
     void FixedUpdate()
     {
@@ -96,26 +74,12 @@ public class PlayerController : MonoBehaviour
         if (!_isBeingHit)
         {
             Move();
-            AnimationFunc();
+            playerAnimation.AnimationFunc(getState(), _isGrounded, _isCrouching, moveInput);
         }
         if (moveInput.x > 0 || moveInput.x < 0)
         {
             TurnCheck();
         }
-        //Se a gente tá caindo já depois de uma velocidade
-        //if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpYDaping(true);
-        //}
-
-        //if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpedFromPlayerFalling = false;
-
-        //    CameraManager.instance.LerpYDaping(false);
-        //}
-
-
 
     }
 
@@ -144,7 +108,8 @@ public class PlayerController : MonoBehaviour
     {
         if (input.started && IsGrounded && !_isBeingHit)
         {
-            _particleJump.Play();
+            _particleJump[0].Play();
+            soundScript.PlayJump();
 
             if (currentModeState != ModeState.Agility)
             {
@@ -173,68 +138,66 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    
+    public void GetDamage()
+    {
+        if(CurrentHealth >= 0)
+        {
+            CurrentHealth--;
+            soundScript.PlayDamage(false);
+            //TODO arremesa pro lado
+            
+        }
+        else
+        {
+            soundScript.PlayDamage(true);
+            SceneManager.LoadScene("SampleScene"); 
+        } //TODO quando fizer o UIManager chamar a tela de morte
+    }
     void Action1()
     {
-        if (!_isBeingHit)
+        if (!_isBeingHit && currentModeState != ModeState.Normal)
         {
             _currentAnimator.SetTrigger("Action1");
         }
-
-        if (currentModeState == ModeState.Normal)
+        if (currentModeState == ModeState.Agility) // Aqui ele dá dash
         {
-
+            soundScript.PlayDash();
 
         }
 
-        if (currentModeState == ModeState.Agility)
+        if (currentModeState == ModeState.Defense) // Aqui ele reflete
         {
-
+            soundScript.PlayReflect();
 
         }
 
-        if (currentModeState == ModeState.Defense)
+        if (currentModeState == ModeState.Attack) // Aqui ele atacaMelee
         {
-
-
-        }
-
-        if (currentModeState == ModeState.Attack)
-        {
-
+            soundScript.PlayMeleeAttack();
 
         }
 
     }
-
     void Action2()
     {
-        if (!_isBeingHit && currentModeState != ModeState.Agility)
+        if (!_isBeingHit && (currentModeState != ModeState.Agility || currentModeState != ModeState.Normal))
         {
             _currentAnimator.SetTrigger("Action2");
 
-            if (currentModeState == ModeState.Normal)
+            if (currentModeState == ModeState.Defense) // bloqueia e cria um escudo em volta
             {
-
+                soundScript.PlayBlock();
 
             }
 
-            if (currentModeState == ModeState.Defense)
+            if (currentModeState == ModeState.Attack)// atira um proj[etil da mão
             {
-
-
-            }
-
-            if (currentModeState == ModeState.Attack)
-            {
-
+                soundScript.PlayRangedAttack();
 
             }
 
         }
     }
-
     private void ToCrouch()
     {
         if (!_isBeingHit)
@@ -244,24 +207,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
-
-
-
     private void TurnCheck()
     {
         if (moveInput.x > 0 && !_isFacingRight)
         {
+            playerAnimation.PlayTurn(false);
+            //_particleJump[1].Play();
             Turn();
+            //if(IsGrounded)
+            //     _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
 
-            _cameraFollowObject.CallTurn();
         }
         else if (moveInput.x < 0 && _isFacingRight)
         {
+            playerAnimation.PlayTurn(true);
+            //_particleJump[1].Play();
             Turn();
-
-            _cameraFollowObject.CallTurn();
+            //if (IsGrounded)
+            //    _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
         }
     }
     private void Turn()
@@ -288,6 +251,24 @@ public class PlayerController : MonoBehaviour
         Defense,
         Attack
     }
+
+    private int getState()
+    {
+        switch (currentModeState)
+        {
+            case ModeState.Normal:
+                return 0;
+            case ModeState.Agility:
+                return 1;
+            case ModeState.Defense:
+                return 2;
+            case ModeState.Attack:
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
 
     //Anima��o
     private void AnimationFunc()
