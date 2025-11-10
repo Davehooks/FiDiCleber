@@ -1,125 +1,79 @@
-
-
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(PlayerInput))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("Player Status")]
-    [SerializeField] private GameObject _player;
+    [Header("Componentes")]
+    [SerializeField] private Rigidbody2D _rb;
+    
+    [Header("Estatísticas")]
     [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
-    //variaveis
-    [Header("Movimentacao")]
-    [SerializeField] private Vector2 moveInput;
-    [SerializeField] private float _crouchSlow = 0.7f;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _jumpForce;
+    [SerializeField] public float _baseSpeed = 100f;
+    [SerializeField] public float _baseJumpForce = 15f;
     [SerializeField] private float _impulseJump = 2f;
+    [SerializeField] private float _crouchSlow = 0.7f;
+
+    [Header("Estado")]
     [SerializeField] private bool _isGrounded = true;
-
-    [Header("Som")]
-    [SerializeField] private CallSFX soundScript;
-
     [SerializeField] public bool _isFacingRight = false;
     [SerializeField] private bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
-    public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
-    public int CurrentHealth
-    {
-        get => currentHealth; set
-        {
-            Debug.Log("PLAYER CONTROLLER: perdeu 1 vida");
-            if (currentHealth <= 0)
-            {
-                this.gameObject.SetActive(false);
-            }
-            else
-                currentHealth = value;
-            
-        }
-    }
-
-    //Animação
-    [Header("Animação")]
+[Header("Animação")]
 
     [SerializeField] private ParticleSystem _particleJump;
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
     private SpriteRenderer _spriteRenderer;
+    private Vector2 moveInput;
+    
+    public Dictionary<ModeState, IPlayerMode> modeInstances;
+    private IPlayerMode currentMode;
+    private ModeState currentModeState;
 
-    [Header("Camera")]
-    [SerializeField]private GameObject _cameraFollowGO;
-    private CameraFollowObject _cameraFollowObject;
-    //private float _fallSpeedYDampingChangeThreshold;
+    public Rigidbody2D Rigidbody => _rb;
+    public Animator Animator => _currentAnimator;
+    public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
+    public bool IsBeingHit => _isBeingHit;
+    public bool IsCrouching { get => _isCrouching; set => _isCrouching = value; }
+    public bool IsFacingRight { get => _isFacingRight; set => _isFacingRight = value; }
+    public float Speed { get; set; }
+    public float JumpForce { get; set; }
+    public float ImpulseJump => _impulseJump;
+    public float CrouchSlow => _crouchSlow;
+    public int CurrentHealth { get; set; }
+    public ParticleSystem ParticleJump => _particleJump;
 
+    public enum ModeState { Normal, Agility, Defense, Attack }
 
-    //componentes
-    private Rigidbody2D _rb;
-
-    [Header("Estado")]
-    //Estados
-    [SerializeField] ModeState currentModeState;
-
-
-    //Metodos da Unity
     void Awake()
     {
+        if (_rb == null) _rb = GetComponent<Rigidbody2D>();
+        if (_currentAnimator == null) _currentAnimator = GetComponent<Animator>();
         
+        Speed = _baseSpeed;
+        JumpForce = _baseJumpForce;
         CurrentHealth = maxHealth;
-    }
-    void Start()
-    {
-        if (_currentAnimator == null)
-            _currentAnimator = GameObject.Find("Player").GetComponent<Animator>();
-        if (_spriteRenderer == null)
-            _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
-        if (_rb == null)
-            _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-        
-        //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
-
-        _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
-
-        //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
-    }
-    void Update()
-    {
-        Debug.Log($"PLAYER CONTROLLER: {currentHealth}/{maxHealth}");
+        InitializeModes();
+        SwitchMode(ModeState.Normal);
     }
 
     void FixedUpdate()
     {
-       
         if (!_isBeingHit)
         {
-            Move();
-            AnimationFunc();
+            currentMode?.HandleMovement(moveInput);
+            currentMode?.UpdateAnimations();
+            
+            if (moveInput.x > 0 || moveInput.x < 0)
+            {
+                TurnCheck();
+            }
         }
-        if (moveInput.x > 0 || moveInput.x < 0)
-        {
-            TurnCheck();
-        }
-        //Se a gente tá caindo já depois de uma velocidade
-        //if (_rb.linearVelocityY < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpYDaping(true);
-        //}
-
-        //if(_rb.linearVelocityY >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
-        //{
-        //    CameraManager.instance.LerpedFromPlayerFalling = false;
-
-        //    CameraManager.instance.LerpYDaping(false);
-        //}
-
-
-
     }
 
-    //Events -- Input Player
     public void Walk(InputAction.CallbackContext input)
     {
         moveInput = input.ReadValue<Vector2>();
@@ -127,201 +81,105 @@ public class PlayerController : MonoBehaviour
 
     public void InputAction1(InputAction.CallbackContext input)
     {
-        Action1();
+        if (input.started) currentMode?.HandleAction1();
     }
 
     public void InputAction2(InputAction.CallbackContext input)
     {
-        Action2();
+        if (input.started) currentMode?.HandleAction2();
     }
 
     public void Crouch(InputAction.CallbackContext input)
     {
-        ToCrouch();
+        if (input.started) currentMode?.HandleCrouch();
     }
 
     public void Jump(InputAction.CallbackContext input)
     {
-        if (input.started && IsGrounded && !_isBeingHit)
+        if (input.started && _isGrounded && !_isBeingHit)
         {
-            _particleJump.Play();
-
-            if (currentModeState != ModeState.Agility)
-            {
-                IsGrounded = false;
-                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-            }
-            else
-            {
-                IsGrounded = false;
-                Debug.Log("Pulo com double");
-                _rb.AddForceY(_jumpForce + _impulseJump, ForceMode2D.Impulse);
-            }
+            currentMode?.HandleJump();
         }
     }
 
-    //Methods
-    private void Move()
+    private void InitializeModes()
     {
-        if (_isCrouching)
+        modeInstances = new Dictionary<ModeState, IPlayerMode>
         {
-            _rb.linearVelocityX = moveInput.x * _speed * _crouchSlow * Time.deltaTime;
-        }
-        else
-        {
-            _rb.linearVelocityX = moveInput.x * _speed * Time.deltaTime;
-        }
-
+            { ModeState.Normal, new NormalMode() },
+            { ModeState.Agility, new AgilityMode() },
+            { ModeState.Defense, new DefenseMode() },
+            { ModeState.Attack, new AttackMode() }
+        };
     }
 
-    
-    void Action1()
+    public void SwitchMode(ModeState newMode)
     {
-        if (!_isBeingHit)
-        {
-            _currentAnimator.SetTrigger("Action1");
-        }
-
-        if (currentModeState == ModeState.Normal)
-        {
-
-
-        }
-
-        if (currentModeState == ModeState.Agility)
-        {
-
-
-        }
-
-        if (currentModeState == ModeState.Defense)
-        {
-
-
-        }
-
-        if (currentModeState == ModeState.Attack)
-        {
-
-
-        }
-
+        currentMode?.ExitMode();
+        currentModeState = newMode;
+        currentMode = modeInstances[newMode];
+        currentMode.EnterMode(this);
+        AnimationFunc();
     }
-
-    void Action2()
-    {
-        if (!_isBeingHit && currentModeState != ModeState.Agility)
-        {
-            _currentAnimator.SetTrigger("Action2");
-
-            if (currentModeState == ModeState.Normal)
-            {
-
-
-            }
-
-            if (currentModeState == ModeState.Defense)
-            {
-
-
-            }
-
-            if (currentModeState == ModeState.Attack)
-            {
-
-
-            }
-
-        }
-    }
-
-    private void ToCrouch()
-    {
-        if (!_isBeingHit)
-        {
-            _isCrouching = !_isCrouching;
-            _currentAnimator.SetBool("IsCrouching", _isCrouching);
-        }
-    }
-
-
-
-
-
 
     private void TurnCheck()
     {
         if (moveInput.x > 0 && !_isFacingRight)
         {
             Turn();
-
-            _cameraFollowObject.CallTurn();
         }
         else if (moveInput.x < 0 && _isFacingRight)
         {
             Turn();
-
-            _cameraFollowObject.CallTurn();
         }
     }
+
     private void Turn()
     {
         if (_isFacingRight)
-        {
-            Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
-            transform.rotation = Quaternion.Euler(rotator);
-            _isFacingRight = !_isFacingRight;
-        }
-        else
-        {
-            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
-            transform.rotation = Quaternion.Euler(rotator);
-            _isFacingRight = !_isFacingRight;
-        }
-    }
-
-    //ENUMS
-    private enum ModeState
     {
-        Normal,
-        Agility,
-        Defense,
-        Attack
+        transform.localScale = new Vector3(-1, 1, 1);
+        _isFacingRight = false;
+    }
+    else
+    {
+        transform.localScale = new Vector3(1, 1, 1);
+        _isFacingRight = true;
+    }
     }
 
-    //Anima��o
+    public void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        if (CurrentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void AnimationFunc()
+{
+    bool wasWalking = _currentAnimator.GetBool("IsWalking");
+    bool wasGrounded = _currentAnimator.GetBool("IsGrounded");
+    bool wasCrouching = _currentAnimator.GetBool("IsCrouching");
+    
+    switch (currentModeState)
     {
-        //Puxa os modos do personagem e coloca na cor certa
-        switch (currentModeState)
-        {
-            case ModeState.Normal:
-                _currentAnimator.runtimeAnimatorController = _animators[0];
-                break;
-
-            case ModeState.Agility:
-                _currentAnimator.runtimeAnimatorController = _animators[1];
-                break;
-            case ModeState.Defense:
-                _currentAnimator.runtimeAnimatorController = _animators[2];
-                break;
-
-            case ModeState.Attack:
-                _currentAnimator.runtimeAnimatorController = _animators[3];
-                break;
-        }
-        _currentAnimator.SetBool("IsGrounded", IsGrounded); // mostra se t� no ch�o ou n�o
-
-        _currentAnimator.SetBool("IsCrouching", _isCrouching); // t� agachado ou n�o
-
-        if (moveInput.x != 0f && IsGrounded) // t� se movendo
-        {
-            _currentAnimator.SetBool("IsWalking", true);
-        }
-        else if (moveInput.x == 0 && IsGrounded) // n�o t� se movendo
-        {
-            _currentAnimator.SetBool("IsWalking", false);
-        }
-
+        case ModeState.Normal:
+            _currentAnimator.runtimeAnimatorController = _animators[0];
+            break;
+        case ModeState.Agility:
+            _currentAnimator.runtimeAnimatorController = _animators[1];
+            break;
+        case ModeState.Defense:
+            _currentAnimator.runtimeAnimatorController = _animators[2];
+            break;
+        case ModeState.Attack:
+            _currentAnimator.runtimeAnimatorController = _animators[3];
+            break;
     }
+    
+    _currentAnimator.SetBool("IsWalking", wasWalking);
+    _currentAnimator.SetBool("IsGrounded", wasGrounded);
+    _currentAnimator.SetBool("IsCrouching", wasCrouching);
+}
 }
