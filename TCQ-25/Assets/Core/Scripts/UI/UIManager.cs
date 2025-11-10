@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
 
     [Header("SettingsUI")]
-    [SerializeField] private GameObject _SettingsPanel;
+    [SerializeField] public GameObject _SettingsPanel;
     [SerializeField] private Slider _MusicVolumeSliders;
     [SerializeField] private Slider _FXVolumeSliders;
     [SerializeField] private Toggle _isFullScreen;
@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshPro _morseUI;
     [SerializeField] private GameObject[] _vida;
     [SerializeField] private Sprite[] _vidas;
+    private bool Started;//Só pra n tocar MIAU no começo
 
 
     private void Awake()
@@ -40,6 +41,7 @@ public class UIManager : MonoBehaviour
         _MusicVolumeSliders.value = GameSettingsManager.SettingsInstance.GetMusicVolume();
         OnFxVolumeChanged(_FXVolumeSliders.value);
         OnMusicVolumeChanged(_MusicVolumeSliders.value);
+        Started = true;
 
         _isFullScreen.onValueChanged.AddListener(OnFullscreenChanged);
         _FXVolumeSliders.onValueChanged.AddListener(OnFxVolumeChanged);
@@ -51,7 +53,7 @@ public class UIManager : MonoBehaviour
     {
         GameSettingsManager.SettingsInstance.SetFxVolume(volume);
 
-        if (!_testSound.isPlaying)
+        if (!_testSound.isPlaying && Started)
         {
             _testSound.Play();
         }

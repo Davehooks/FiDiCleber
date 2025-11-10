@@ -21,10 +21,8 @@ public class PlayerController : MonoBehaviour
     [Header("Som")]
     [SerializeField] private PlayerSFX soundScript;
 
-
-
-    [SerializeField] public bool _isFacingRight = false;
-    [SerializeField] private bool _isBeingHit = false;
+    [SerializeField] public bool _isFacingRight = true;
+    [SerializeField] public bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
@@ -35,6 +33,7 @@ public class PlayerController : MonoBehaviour
     //Animação
     [Header("Animação")]
 
+    private Animations playerAnimation;
     [SerializeField] private ParticleSystem[] _particleJump; // 0 para jump, 1 pra run, 2 para dano
     [SerializeField] private RuntimeAnimatorController[] _animators;
     [SerializeField] private Animator _currentAnimator;
@@ -53,13 +52,14 @@ public class PlayerController : MonoBehaviour
     //Metodos da Unity
     void Start()
     {
+        playerAnimation = GetComponent<Animations>();
         CurrentHealth = maxHealth;
         if (_currentAnimator == null)
-            _currentAnimator = GameObject.Find("Player").GetComponent<Animator>();
+            _currentAnimator = GetComponent<Animator>();
         if (_spriteRenderer == null)
-            _spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         if (_rb == null)
-            _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+            _rb = GetComponent<Rigidbody2D>();
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
         soundScript = gameObject.GetComponent<PlayerSFX>();
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         if (!_isBeingHit)
         {
             Move();
-            AnimationFunc();
+            playerAnimation.AnimationFunc(getState(), _isGrounded, _isCrouching, moveInput);
         }
         if (moveInput.x > 0 || moveInput.x < 0)
         {
@@ -211,18 +211,20 @@ public class PlayerController : MonoBehaviour
     {
         if (moveInput.x > 0 && !_isFacingRight)
         {
-            _particleJump[1].Play();
+            playerAnimation.PlayTurn(false);
+            //_particleJump[1].Play();
             Turn();
-            if(IsGrounded)
-                 _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
+            //if(IsGrounded)
+            //     _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
 
         }
         else if (moveInput.x < 0 && _isFacingRight)
         {
-            _particleJump[1].Play();
+            playerAnimation.PlayTurn(true);
+            //_particleJump[1].Play();
             Turn();
-            if (IsGrounded)
-                _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            //if (IsGrounded)
+            //    _particleJump[1].transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
         }
     }
     private void Turn()
@@ -249,6 +251,24 @@ public class PlayerController : MonoBehaviour
         Defense,
         Attack
     }
+
+    private int getState()
+    {
+        switch (currentModeState)
+        {
+            case ModeState.Normal:
+                return 0;
+            case ModeState.Agility:
+                return 1;
+            case ModeState.Defense:
+                return 2;
+            case ModeState.Attack:
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
 
     //Anima��o
     private void AnimationFunc()
