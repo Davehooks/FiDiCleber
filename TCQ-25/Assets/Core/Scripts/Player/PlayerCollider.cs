@@ -45,14 +45,14 @@ public class PlayerCollider : MonoBehaviour
             enemy.TakeDamage(1, this.gameObject);
 
 
+        QuicaQuica();
             return;
         }
-
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             playerController.IsGrounded = true;
         }
-
+        
     }
     
 

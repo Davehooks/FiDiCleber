@@ -1,15 +1,11 @@
-
-
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Status")]
-    [SerializeField] private GameObject _player;
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int currentHealth = 3;
     //variaveis
     [Header("Movimentacao")]
     [SerializeField] private Vector2 moveInput;
@@ -31,13 +27,13 @@ public class PlayerController : MonoBehaviour
     {
         get => currentHealth; set
         {
-            Debug.Log("PLAYER CONTROLLER: perdeu 1 vida");
             if (currentHealth <= 0)
             {
                 this.gameObject.SetActive(false);
             }
             else
                 currentHealth = value;
+            Debug.Log("PLAYER CONTROLLER: perdeu 1 vida");
             
         }
     }

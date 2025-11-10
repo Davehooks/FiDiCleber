@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Project Path="RBG.Mulligan.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+</Solution>

@@ -1,16 +1,21 @@
-using System.Buffers.Text;
+using System.Collections;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class RedHood : Enemy
 {
     [Header("RedHood Variabels")]
-    
-    [SerializeField] private Transform groundCheck; //detecta o chão
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float checkRadius = 0.1f; //bem baixo para ser preciso
 
+    [SerializeField] private Transform groundCheck; //detecta o chão
+    [SerializeField] private Transform visionCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float checkRadius = 0.1f; //bem baixo para ser preciso
+    
     private bool isFacingRight = false;
+    [SerializeField] private float shootingTime = 0.2f;
+
+
 
     //Override methods
     //RedHood vai se mover observando plataformas
@@ -19,12 +24,16 @@ public class RedHood : Enemy
         float direction = isFacingRight ? 1f : -1f;
         rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
 
+        if (Physics2D.Linecast(visionCheck.position, transform.position, playerLayer))
+        {
+            Debug.Log("É tíru!");
+            Atack();
+        }
         if (!Physics2D.Linecast(groundCheck.position, transform.position, groundLayer))
         {
             Flip();
         }
     }
-    
     protected override void OnHitAnimation(int amountDamage, GameObject source)
     {
         base.OnHitAnimation(amountDamage, source);
@@ -36,7 +45,15 @@ public class RedHood : Enemy
         base.Die();
         Debug.Log($"{name} morreu!");
     }
-    
+
+    //Metodos
+    private void Atack()
+    {
+        StartCoroutine(Shooting(shootingTime));
+    }
+
+
+
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -44,13 +61,24 @@ public class RedHood : Enemy
         newScale.x *= -1;
         transform.localScale = newScale;
     }
-    private void OnDrawGizmosSelected()
-{
-    if (groundCheck != null)
+    //VISUALIZACAO NO EDITOR
+    private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, groundCheck.position);
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, groundCheck.position);
+        }
+        if (visionCheck != null)
+        {
+            Gizmos.color = Color.aliceBlue;
+            Gizmos.DrawLine(transform.position, visionCheck.position);
+        }
     }
-}
-
+    //COROUTINES
+    public IEnumerator Shooting(float timing)
+    {
+        //TODOOOOO
+        yield return new WaitForSeconds(timing);
+    }
 }
