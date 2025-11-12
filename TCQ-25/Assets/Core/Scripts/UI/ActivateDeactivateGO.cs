@@ -47,4 +47,16 @@ public class ActivateDeactivateGO : MonoBehaviour
     {
         trigger._OpenedEntire = true;
     }
+
+    public void DestroyGO()
+    {
+        if(_gameObject != null)
+        {
+        for (int i = 0; i < _gameObject.Length; i++)
+        {
+            Destroy(_gameObject[i]);
+        }
+        }
+
+    }
 }

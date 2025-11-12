@@ -474,6 +474,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cutscene"",
+                    ""type"": ""Button"",
+                    ""id"": ""97d15bd5-5c17-4b77-8772-0bfc66862a5f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -597,6 +606,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Close"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8843fd34-d841-42d2-b344-a28a130f4729"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cutscene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -678,6 +698,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_UIInteraction_Down = m_UIInteraction.FindAction("Down", throwIfNotFound: true);
         m_UIInteraction_Select = m_UIInteraction.FindAction("Select", throwIfNotFound: true);
         m_UIInteraction_Close = m_UIInteraction.FindAction("Close", throwIfNotFound: true);
+        m_UIInteraction_Cutscene = m_UIInteraction.FindAction("Cutscene", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -914,6 +935,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UIInteraction_Down;
     private readonly InputAction m_UIInteraction_Select;
     private readonly InputAction m_UIInteraction_Close;
+    private readonly InputAction m_UIInteraction_Cutscene;
     /// <summary>
     /// Provides access to input actions defined in input action map "UIInteraction".
     /// </summary>
@@ -941,6 +963,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UIInteraction/Close".
         /// </summary>
         public InputAction @Close => m_Wrapper.m_UIInteraction_Close;
+        /// <summary>
+        /// Provides access to the underlying input action "UIInteraction/Cutscene".
+        /// </summary>
+        public InputAction @Cutscene => m_Wrapper.m_UIInteraction_Cutscene;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -979,6 +1005,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Close.started += instance.OnClose;
             @Close.performed += instance.OnClose;
             @Close.canceled += instance.OnClose;
+            @Cutscene.started += instance.OnCutscene;
+            @Cutscene.performed += instance.OnCutscene;
+            @Cutscene.canceled += instance.OnCutscene;
         }
 
         /// <summary>
@@ -1002,6 +1031,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Close.started -= instance.OnClose;
             @Close.performed -= instance.OnClose;
             @Close.canceled -= instance.OnClose;
+            @Cutscene.started -= instance.OnCutscene;
+            @Cutscene.performed -= instance.OnCutscene;
+            @Cutscene.canceled -= instance.OnCutscene;
         }
 
         /// <summary>
@@ -1185,5 +1217,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnClose(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Cutscene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCutscene(InputAction.CallbackContext context);
     }
 }

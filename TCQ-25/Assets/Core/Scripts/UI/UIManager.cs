@@ -46,7 +46,6 @@ public class UIManager : MonoBehaviour
         _MusicVolumeSliders.onValueChanged.AddListener(OnMusicVolumeChanged);
 
     }
-
     public void OnFxVolumeChanged(float volume) // vai no Slider FX
     {
         GameSettingsManager.SettingsInstance.SetFxVolume(volume);
@@ -56,6 +55,11 @@ public class UIManager : MonoBehaviour
             _testSound.Play();
         }
     }
+    public void OnRainVolumeChanged(float volume)
+    {
+        GameSettingsManager.SettingsInstance.SetRainVolume(volume);
+    }
+
     public void OnMusicVolumeChanged(float volume)
     {
         GameSettingsManager.SettingsInstance.SetMusicVolume(volume);
