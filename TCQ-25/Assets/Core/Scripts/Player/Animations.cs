@@ -93,4 +93,9 @@ public class Animations : MonoBehaviour
 
     }
 
+    public void PlayWakeUp()
+    {
+        _currentAnimator.SetTrigger("WakeUP");
+    }
+
 }

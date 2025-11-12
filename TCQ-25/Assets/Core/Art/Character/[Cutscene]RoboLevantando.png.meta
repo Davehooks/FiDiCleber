@@ -124,7 +124,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,7 +138,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -159,10 +159,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -190,12 +190,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_0'
       rect:
         serializedVersion: 2
-        x: 31
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_1'
       rect:
         serializedVersion: 2
-        x: 151
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 120
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_2'
       rect:
         serializedVersion: 2
-        x: 271
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 240
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_3'
       rect:
         serializedVersion: 2
-        x: 391
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 360
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_4'
       rect:
         serializedVersion: 2
-        x: 511
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 480
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -300,12 +300,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_5'
       rect:
         serializedVersion: 2
-        x: 631
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -322,12 +322,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_6'
       rect:
         serializedVersion: 2
-        x: 751
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 720
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_7'
       rect:
         serializedVersion: 2
-        x: 871
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 840
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -366,12 +366,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_8'
       rect:
         serializedVersion: 2
-        x: 991
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -388,12 +388,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_9'
       rect:
         serializedVersion: 2
-        x: 1111
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1080
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -410,12 +410,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_10'
       rect:
         serializedVersion: 2
-        x: 1231
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -432,12 +432,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_11'
       rect:
         serializedVersion: 2
-        x: 1351
-        y: 3
-        width: 65
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1320
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -454,12 +454,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_12'
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 2
-        width: 35
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1440
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -476,12 +476,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_13'
       rect:
         serializedVersion: 2
-        x: 1607
-        y: 2
-        width: 35
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1560
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -498,12 +498,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_14'
       rect:
         serializedVersion: 2
-        x: 1727
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1680
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -520,12 +520,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_15'
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1800
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -542,12 +542,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_16'
       rect:
         serializedVersion: 2
-        x: 1967
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -564,12 +564,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_17'
       rect:
         serializedVersion: 2
-        x: 2071
-        y: 1
-        width: 68
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2040
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -586,12 +586,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_18'
       rect:
         serializedVersion: 2
-        x: 2203
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2160
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -608,12 +608,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_19'
       rect:
         serializedVersion: 2
-        x: 2323
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2280
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -630,12 +630,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_20'
       rect:
         serializedVersion: 2
-        x: 2443
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -652,12 +652,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_21'
       rect:
         serializedVersion: 2
-        x: 2563
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2520
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -674,12 +674,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_22'
       rect:
         serializedVersion: 2
-        x: 2683
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2640
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -696,12 +696,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_23'
       rect:
         serializedVersion: 2
-        x: 2803
-        y: 1
-        width: 45
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2760
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -718,12 +718,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_24'
       rect:
         serializedVersion: 2
-        x: 2927
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -740,12 +740,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_25'
       rect:
         serializedVersion: 2
-        x: 3047
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3000
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -762,12 +762,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_26'
       rect:
         serializedVersion: 2
-        x: 3167
-        y: 1
-        width: 35
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3120
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -784,12 +784,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_27'
       rect:
         serializedVersion: 2
-        x: 3286
-        y: 1
-        width: 43
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3240
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -806,12 +806,12 @@ TextureImporter:
       name: '[Cutscene]RoboLevantando_28'
       rect:
         serializedVersion: 2
-        x: 3406
-        y: 1
-        width: 44
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3360
+        y: 0
+        width: 120
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -824,33 +824,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: '[Cutscene]RoboLevantando_29'
-      rect:
-        serializedVersion: 2
-        x: 3526
-        y: 1
-        width: 43
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29a2531a4ffdcff20800000000000000
-      internalID: 3457884855683328658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 83af18a4544f12e44a801bf9d3c9f890
     internalID: 0
     vertices: []
     indices: 
@@ -858,7 +836,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":120.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":7,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       '[Cutscene]RoboLevantando_0': 2606755241300278102
       '[Cutscene]RoboLevantando_1': 8474858137049673702
@@ -882,7 +862,6 @@ TextureImporter:
       '[Cutscene]RoboLevantando_26': -1410201741642127465
       '[Cutscene]RoboLevantando_27': 3724185109982048912
       '[Cutscene]RoboLevantando_28': 4672709163138924015
-      '[Cutscene]RoboLevantando_29': 3457884855683328658
       '[Cutscene]RoboLevantando_3': 2692374714462020257
       '[Cutscene]RoboLevantando_4': -7689058693913627693
       '[Cutscene]RoboLevantando_5': 6231068169372640703

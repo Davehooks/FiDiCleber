@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class GameSettingsManager : MonoBehaviour
 {
@@ -10,17 +11,19 @@ public class GameSettingsManager : MonoBehaviour
     [Header("Configs")]
     [SerializeField] private AudioMixer fxMixer;
     [SerializeField] private AudioMixer music;
+    [SerializeField] private AudioMixer rainMixer;
     [SerializeField] private float musicVolume;
     [SerializeField] private float fxVolume;
+    [SerializeField] private float rainVolume;
     private bool _isFullScreen;
 
     private void Awake()
     {
+        LoadSettings();
         if (SettingsInstance == null)
         {
             SettingsInstance = this;
             DontDestroyOnLoad(gameObject);
-            LoadSettings();
         }
         else
         {
@@ -31,7 +34,6 @@ public class GameSettingsManager : MonoBehaviour
 
     void Start()
     {
-        LoadSettings();
     }
     private void LoadSettings()
     {
@@ -55,8 +57,12 @@ public class GameSettingsManager : MonoBehaviour
         Debug.Log("mexeu no SetMusicVolume do GameSettingsManager");
 
         musicVolume = volume;
-        music.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+        if (volume == 0)
+            music.SetFloat("MusicVolume", -80);
+        else
+            music.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void SetFxVolume(float volume)
@@ -64,8 +70,35 @@ public class GameSettingsManager : MonoBehaviour
         Debug.Log("mexeu no SetFXVolume do GameSettingsManager");
 
         fxVolume = volume;
-        fxMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+        if (volume == 0)
+        {
+            fxMixer.SetFloat("SFXVolume", -80);
+
+        }
+        else
+        {
+            fxMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+        }
         PlayerPrefs.SetFloat("SFXVolume",volume);
+        PlayerPrefs.Save();
+    }
+
+    public void SetRainVolume(float volume)
+    {
+        Debug.Log("mexeu no SetFXVolume do GameSettingsManager");
+
+        rainVolume = volume;
+        if (volume == 0)
+        {
+            rainMixer.SetFloat("RainVolume", -80);
+
+        }
+        else
+        {
+            rainMixer.SetFloat("RainVolume", Mathf.Log10(volume) * 20);
+        }
+        PlayerPrefs.SetFloat("RainVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public float GetFXVolume()
@@ -77,10 +110,14 @@ public class GameSettingsManager : MonoBehaviour
         return PlayerPrefs.GetFloat("MusicVolume", 0.5f);
     }
 
+    public float GetRainVolume()
+    {
+        return PlayerPrefs.GetFloat("RainVolume", 0.5f);
+    }
+
     public bool IsFullScreen()
     {
         return _isFullScreen;
     }
-
 
 }
