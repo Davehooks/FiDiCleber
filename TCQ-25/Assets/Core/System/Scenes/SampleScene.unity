@@ -31866,8 +31866,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 81457673683521864, guid: bcef04c8da27c484bad784f719731e9e, type: 3}
-      propertyPath: playerLayer.m_Bits
-      value: 8
+      propertyPath: shootingTime
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 2123254215255179178, guid: bcef04c8da27c484bad784f719731e9e, type: 3}
       propertyPath: m_LocalPosition.x

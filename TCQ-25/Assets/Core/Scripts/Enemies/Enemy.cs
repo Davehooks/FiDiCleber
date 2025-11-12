@@ -62,6 +62,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     protected virtual void OnHitAnimation(int damageAmount, GameObject source)
     {
+        // Tem o amount caso a gente queira dar feedback diferente dependendo do dano
         if (animator != null)
             animator.SetTrigger("Hit");
     }
