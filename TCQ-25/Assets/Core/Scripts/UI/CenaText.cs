@@ -6,27 +6,26 @@ using UnityEngine.UI;
 public class CenaText : MonoBehaviour
 {
     private bool entrou = false;
-    [SerializeField] private TMP_Text text;  
+    [SerializeField] private TMP_Text text;
+    private Collider2D collider;
+    [SerializeField] private GameObject chuva;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {   
-        if (!entrou)
-        {
-        text.gameObject.SetActive(true);
-        entrou = true;
-        }
+    private void Start()
+    {
+        collider = GetComponent<Collider2D>();
     }
 
-    IEnumerator CallText()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        new WaitForSeconds(5);
-        text.gameObject.SetActive(false);
-        for (int index = 0; index <= 5; index++)
+        if (!entrou && collision.tag == "Player")
         {
-            text.color = new Color (text.color.r,text.color.g,text.color.b,text.color.a -0.2f);
-            new WaitForSeconds(0.2f);
+            text.gameObject.SetActive(true);
+            entrou = true;
+            Debug.Log("Ativou o texto");
+            if (chuva != null && chuva.activeInHierarchy)
+            {
+                chuva.SetActive(false);
+            }
         }
-
-        yield return null;
     }
 }
