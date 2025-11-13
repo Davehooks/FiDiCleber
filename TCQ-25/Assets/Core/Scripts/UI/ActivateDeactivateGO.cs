@@ -57,6 +57,5 @@ public class ActivateDeactivateGO : MonoBehaviour
             Destroy(_gameObject[i]);
         }
         }
-
     }
 }

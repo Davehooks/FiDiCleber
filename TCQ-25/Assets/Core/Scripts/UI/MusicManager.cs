@@ -7,9 +7,7 @@ public class MusicManager : MonoBehaviour
 
     [Header("Referências")]
     public MusicState currentMusicState = MusicState.Menu;
-
-
-
+    public MusicState previousMusicState;
 
     public static MusicManager MusicInstance; // fazer com que possa ser chamado independente do lugar
     [Header("Configuracoes")]
@@ -30,46 +28,68 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         musicSource = GetComponent<AudioSource>();
-        switch (SceneManager.GetActiveScene().ToString())
+        LoadMusic();
+        PlayTrack(currentMusicState);
+        previousMusicState = currentMusicState;
+    }
+
+    private void LoadMusic()
+    {
+        switch (SceneManager.GetActiveScene().name)
         {
             case "SampleScene":
                 currentMusicState = MusicState.Exploration;
-                return;
+                break;
             case "MenuScene":
-                currentMusicState=MusicState.Menu;
-                return;
+                currentMusicState = MusicState.Menu;
+                break;
             case "Boss":
-                currentMusicState=MusicState.Battle;
-                return;
+                currentMusicState = MusicState.Battle;
+                break;
         }
-        PlayTrack(currentMusicState);
+        if (currentMusicState != previousMusicState)
+        {
+            previousMusicState = currentMusicState;
+            PlayTrack(currentMusicState);
+        }    
     }
-    
-
-
     public void PlayTrack(MusicState state)
     {
-        int trackIndex=-1;
-
-        switch (state)
+        Debug.Log($"{state}");
+        int trackIndex=0;
+        if(state == MusicState.Menu)
         {
-            case MusicState.Menu:
-                trackIndex = 0;
-                break;
-            case MusicState.Exploration:
-                trackIndex = 1;
-                break;
-            case MusicState.Battle:
-                trackIndex = 2;
-                break;
-            default:
-                Debug.Log("Nao existe esse state");
-                break;
+            trackIndex = 0;
+        }
+        else if (state == MusicState.Exploration)
+        { 
+            trackIndex = 1;
+        }
+        else if(state == MusicState.Battle)
+        {
+            trackIndex = 2;
         }
         musicSource.clip = tracks[trackIndex];
         musicSource.Play();
     }
+
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        LoadMusic();
+    }
+
 }

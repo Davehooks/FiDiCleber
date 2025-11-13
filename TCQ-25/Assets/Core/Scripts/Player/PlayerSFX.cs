@@ -14,7 +14,6 @@ public class PlayerSFX : MonoBehaviour
     {
         if (SFXSources.clip != null)
         {
-            Debug.Log(SFXSources.clip.ToString());
         }
     }
 
@@ -25,12 +24,10 @@ public class PlayerSFX : MonoBehaviour
             if (!morto)
             {
                 SFXSources.clip = SFXs[0];
-                Debug.Log("Tocou dano");
             }
             if (morto)
             {
                 SFXSources.clip = SFXs[1];
-                Debug.Log("Tocou morte");
             }
             SFXSources.Play();
 
@@ -38,12 +35,10 @@ public class PlayerSFX : MonoBehaviour
     }
     public void PlayJump()
     {
-        Debug.Log("Era pra tocar pulo");
         if (SFXSources != null)
         {
             SFXSources.clip = SFXs[2];
             SFXSources.Play();
-            Debug.Log("Tocou pulo");
         }
     }
 
@@ -60,7 +55,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[4];
             SFXSources.Play();
 
-            Debug.Log("Tocou dash");
         }
     }
     public void PlayTrocarModo()
@@ -70,7 +64,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[5];
             SFXSources.Play();
 
-            Debug.Log("Tocou TrocarModo");
         }
     }
     public void PlayErrouModo()
@@ -79,8 +72,6 @@ public class PlayerSFX : MonoBehaviour
         {
             SFXSources.clip = SFXs[6];
             SFXSources.Play();
-
-            Debug.Log("Tocou ErrouModo");
         }
     }
 
@@ -91,7 +82,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[7];
             SFXSources.Play();
 
-            Debug.Log("Tocou Block");
         }
     }
     public void PlayStun()
@@ -100,8 +90,6 @@ public class PlayerSFX : MonoBehaviour
         {
             SFXSources.clip = SFXs[8];
             SFXSources.Play();
-
-            Debug.Log("Tocou Stun");
         }
     }
 
@@ -112,7 +100,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[9];
             SFXSources.Play();
 
-            Debug.Log("Tocou Reflect");
         }
     }
 
@@ -123,7 +110,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[10];
             SFXSources.Play();
 
-            Debug.Log("Tocou MeleeAttack");
         }
     }
 
@@ -134,7 +120,6 @@ public class PlayerSFX : MonoBehaviour
             SFXSources.clip = SFXs[11];
             SFXSources.Play();
 
-            Debug.Log("Tocou RangedAttack");
         }
     }
 

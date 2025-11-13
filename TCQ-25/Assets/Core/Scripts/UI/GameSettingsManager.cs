@@ -54,7 +54,6 @@ public class GameSettingsManager : MonoBehaviour
 
     public void SetMusicVolume(float volume)
     {
-        Debug.Log("mexeu no SetMusicVolume do GameSettingsManager");
 
         musicVolume = volume;
         if (volume == 0)
@@ -67,7 +66,6 @@ public class GameSettingsManager : MonoBehaviour
 
     public void SetFxVolume(float volume)
     {
-        Debug.Log("mexeu no SetFXVolume do GameSettingsManager");
 
         fxVolume = volume;
         if (volume == 0)
@@ -85,7 +83,6 @@ public class GameSettingsManager : MonoBehaviour
 
     public void SetRainVolume(float volume)
     {
-        Debug.Log("mexeu no SetFXVolume do GameSettingsManager");
 
         rainVolume = volume;
         if (volume == 0)

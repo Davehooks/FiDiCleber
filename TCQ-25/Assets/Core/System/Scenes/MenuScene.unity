@@ -1678,6 +1678,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5636671621912974295, guid: 60ffab8c53d41f0448ade23ccb1bbdf5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845487304160009062, guid: 60ffab8c53d41f0448ade23ccb1bbdf5, type: 3}
+      propertyPath: currentMusicState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845487304160009062, guid: 60ffab8c53d41f0448ade23ccb1bbdf5, type: 3}
+      propertyPath: previousMusicState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9185990593416889740, guid: 60ffab8c53d41f0448ade23ccb1bbdf5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 122.71424
@@ -1733,7 +1745,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 620342925593645232, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 695541087462521857, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1745,7 +1757,7 @@ PrefabInstance:
       objectReference: {fileID: 66791391}
     - target: {fileID: 1283079535144911986, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979721606155056784, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1753,15 +1765,15 @@ PrefabInstance:
       objectReference: {fileID: 66791391}
     - target: {fileID: 2229636852592257145, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5608652540636248520, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6419329619929427567, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6518036776035054629, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_Pivot.x
@@ -1847,13 +1859,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6576695146662443087, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6631703050075897699, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 66791391}
     - target: {fileID: 6995722300735079125, guid: 06d9a6edbf3bb2747af3221e0e6343e3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

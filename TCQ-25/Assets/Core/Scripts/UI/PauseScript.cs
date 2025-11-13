@@ -19,7 +19,7 @@ public class PauseScript : MonoBehaviour
 
     private void Update()
     {
-        if (_pausePanel.activeInHierarchy)
+        if (_pausePanel != null &&_pausePanel.activeInHierarchy)
         {
             foreach (Button buttons in buttons)
             {

@@ -10007,8 +10007,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1312305777, guid: b3f704dd8b43cdc468c6188bd15fe20b, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 4337478859281495751, guid: 8637b42200077194bbf4308e4d7e5bc2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10057,7 +10057,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10217,6 +10217,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 551f8d91-7d11-41c0-8f45-aac3936bc115
     m_ActionName: 'Player/Interact[/Keyboard/e,/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97d15bd5-5c17-4b77-8772-0bfc66862a5f
+    m_ActionName: 'UIInteraction/Cutscene[/Keyboard/anyKey]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -10256,7 +10260,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 5c0fabfd71c0d4548b8ca7e185154a5e, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10380,11 +10384,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  _particleJump:
-  - {fileID: 0}
-  - {fileID: 0}
-  _animators: []
+  _animators:
+  - {fileID: 9100000, guid: 176254af4b20e164e95ec750ffb76b52, type: 2}
+  - {fileID: 9100000, guid: b2936858cc5a81946a1ca641322cb481, type: 2}
+  - {fileID: 9100000, guid: 6ab787c315f1211458f57c498c2adb8c, type: 2}
+  - {fileID: 9100000, guid: f30fd5bf5c77f484fa1681dee463f912, type: 2}
   _currentAnimator: {fileID: 0}
+  _particle:
+  - {fileID: 2873074097446182220}
+  - {fileID: 8359428920298303993}
 --- !u!1 &6666030091498630521
 GameObject:
   m_ObjectHideFlags: 0
