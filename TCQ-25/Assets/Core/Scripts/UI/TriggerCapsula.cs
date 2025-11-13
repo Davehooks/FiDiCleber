@@ -31,6 +31,7 @@ public class TriggerCapsula : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Debug.Log("Player entrou");
             if (!_Opened)
             {
                 CapsuleAnimator.SetTrigger("Entrou");
