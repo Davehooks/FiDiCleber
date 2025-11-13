@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105563669647213394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4365426225992705975}
+  m_Layer: 7
+  m_Name: VisionCheck45
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4365426225992705975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105563669647213394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.63, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2123254215255179178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420327290401575322
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +98,7 @@ Transform:
   m_Children:
   - {fileID: 4729727538981085438}
   - {fileID: 4928760857372092758}
+  - {fileID: 4365426225992705975}
   - {fileID: 249681489110987084}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -190,7 +222,9 @@ MonoBehaviour:
   moveSpeed: 2
   invincibilityTime: 0.5
   groundCheck: {fileID: 4729727538981085438}
-  visionCheck: {fileID: 4928760857372092758}
+  visionCheck:
+  - {fileID: 4928760857372092758}
+  - {fileID: 4365426225992705975}
   weaponPosition: {fileID: 249681489110987084}
   groundLayer:
     serializedVersion: 2
@@ -201,6 +235,8 @@ MonoBehaviour:
   checkRadius: 0.09
   shootingTime: 0.5
   _prefabProjectile: {fileID: 7127151086835929623, guid: 2fc395c913642e94c8be779d7b2f7b64, type: 3}
+  canShoot: 1
+  isShooting: 0
 --- !u!70 &4477296007681240452
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -263,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 6205201944407331805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.556, y: 0, z: 0}
+  m_LocalPosition: {x: -1.63, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

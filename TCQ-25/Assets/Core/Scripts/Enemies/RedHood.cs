@@ -8,7 +8,7 @@ public class RedHood : Enemy
     [Header("RedHood Variabels")]
 
     [SerializeField] private Transform groundCheck; //detecta o chão
-    [SerializeField] private Transform visionCheck;
+    [SerializeField] private Transform[] visionCheck = new Transform[2];
     [SerializeField] private Transform weaponPosition;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask playerLayer;
@@ -64,7 +64,7 @@ public class RedHood : Enemy
     private void VisionChecking()
     {
         //checks if the mob sees the player
-        if (Physics2D.Linecast(visionCheck.position, transform.position, playerLayer))
+        if (Physics2D.Linecast(visionCheck[0].position, transform.position, playerLayer) || Physics2D.Linecast(visionCheck[1].position, transform.position, playerLayer))
         {
             if (canShoot)
                 Atack();
@@ -100,7 +100,8 @@ public class RedHood : Enemy
         if (visionCheck != null)
         {
             Gizmos.color = Color.aliceBlue;
-            Gizmos.DrawLine(transform.position, visionCheck.position);
+            Gizmos.DrawLine(transform.position, visionCheck[0].position);
+            Gizmos.DrawLine(transform.position, visionCheck[1].position);
         }
     }
     //COROUTINES
