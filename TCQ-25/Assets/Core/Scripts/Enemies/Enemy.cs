@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 {
     [Header("General Attributes")] //serão protected para poder usar na classe ou nas filhas mas não no resto
     [SerializeField] protected int maxHealth = 1;
+    
     [SerializeField] protected float moveSpeed = 2f;
     [SerializeField] protected float invincibilityTime = 0.5f;
 
@@ -42,7 +43,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
         currentHealth -= damageAmount;
         OnHitAnimation(damageAmount, source);
-
+        Debug.Log($"ENEMY: {currentHealth}/{maxHealth}");
         if (currentHealth <= 0)
         {
             Die();
@@ -61,6 +62,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     protected virtual void OnHitAnimation(int damageAmount, GameObject source)
     {
+        // Tem o amount caso a gente queira dar feedback diferente dependendo do dano
         if (animator != null)
             animator.SetTrigger("Hit");
     }
