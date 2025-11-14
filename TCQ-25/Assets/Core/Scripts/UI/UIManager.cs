@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
 
     [Header("SettingsUI")]
-    [SerializeField] private GameObject _SettingsPanel;
+    [SerializeField] public GameObject _SettingsPanel;
     [SerializeField] private Slider _MusicVolumeSliders;
     [SerializeField] private Slider _FXVolumeSliders;
     [SerializeField] private Toggle _isFullScreen;

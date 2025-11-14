@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     [Header("Som")]
     [SerializeField] private CallSFX soundScript;
 
-    [SerializeField] public bool _isFacingRight = false;
-    [SerializeField] private bool _isBeingHit = false;
+    [SerializeField] public bool _isFacingRight = true;
+    [SerializeField] public bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
     public bool IsGrounded { get => _isGrounded; set => _isGrounded = value; }
@@ -77,13 +77,10 @@ public class PlayerController : MonoBehaviour
         
         //currentModeState = ModeState.Normal; // TODO tirar esse comentário pra sempre começar Normal
 
-        _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
-
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThresold;
     }
     void Update()
     {
-        Debug.Log($"PLAYER CONTROLLER: {currentHealth}/{maxHealth}");
     }
 
     void FixedUpdate()
