@@ -98,4 +98,10 @@ public class Animations : MonoBehaviour
         _currentAnimator.SetTrigger("WakeUP");
     }
 
+    public void PlayDamage()
+    {
+        _currentAnimator.SetTrigger("Hit");
+        player._isBeingHit = true;
+    }
+
 }

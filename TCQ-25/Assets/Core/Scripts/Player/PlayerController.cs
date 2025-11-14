@@ -26,8 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public bool _isBeingHit = false;
     [SerializeField] private bool _isCrouching = false;
 
-[Header("Animação")]
-
+    [SerializeField] private Animations _anim;
 
     private Vector2 moveInput;
     
@@ -50,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (_anim == null) _anim = GetComponent<Animations>();
         if (_rb == null) _rb = GetComponent<Rigidbody2D>();
         Debug.Log($"base velocidade inicio:{_baseSpeed}");
         Speed = _baseSpeed;
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
                 TurnCheck();
             }
         }
+        _anim.AnimationFunc(SetAnimationMode(), IsGrounded, IsCrouching, moveInput);
     }
 
     public void Walk(InputAction.CallbackContext input)
@@ -83,12 +84,21 @@ public class PlayerController : MonoBehaviour
 
     public void InputAction1(InputAction.CallbackContext input)
     {
-        if (input.started) currentMode?.HandleAction1();
+        if (input.started)
+        {
+            currentMode?.HandleAction1();
+            _anim.PlayAction1();
+        }
+        
     }
 
     public void InputAction2(InputAction.CallbackContext input)
     {
-        if (input.started) currentMode?.HandleAction2();
+        if (input.started)
+        { 
+            currentMode?.HandleAction2();
+            _anim.PlayAction2();
+        }
     }
 
     public void Crouch(InputAction.CallbackContext input)
@@ -101,6 +111,7 @@ public class PlayerController : MonoBehaviour
         if (_isGrounded && input.performed &&  !_isBeingHit)
         {
             currentMode?.HandleJump();
+            _anim.PlayJump();
         }
     }
 
@@ -137,24 +148,38 @@ public class PlayerController : MonoBehaviour
 
     private void Turn()
     {
+        _anim.PlayTurn(_isFacingRight);
         if (_isFacingRight)
     {
+           
         transform.localScale = new Vector3(-1, 1, 1);
         _isFacingRight = false;
     }
     else
     {
-        transform.localScale = new Vector3(1, 1, 1);
+        
+         transform.localScale = new Vector3(1, 1, 1);
         _isFacingRight = true;
     }
     }
 
     public void TakeDamage(int damage)
     {
+        if(!_isBeingHit)
+        {
         CurrentHealth -= damage;
         if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
         }
+        }
+    }
+
+    private int SetAnimationMode()
+    {
+        if (currentModeState == ModeState.Attack) { return 3; }
+        else if (currentModeState == ModeState.Agility) { return 1; }
+        else if (currentModeState == ModeState.Defense) { return 2; }
+        return 0;
     }
 }
