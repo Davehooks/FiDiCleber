@@ -47515,14 +47515,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1038977753134260858, guid: f500193c67bdfa25eae944198854b855, type: 3}
+      propertyPath: _baseSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038977753134260858, guid: f500193c67bdfa25eae944198854b855, type: 3}
+      propertyPath: _isFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5721846430351306031, guid: f500193c67bdfa25eae944198854b855, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5938194434216931340, guid: f500193c67bdfa25eae944198854b855, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 176254af4b20e164e95ec750ffb76b52, type: 2}
     - target: {fileID: 6576585063858561879, guid: f500193c67bdfa25eae944198854b855, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1312305777, guid: b3f704dd8b43cdc468c6188bd15fe20b, type: 3}
+    - target: {fileID: 8087220188291708262, guid: f500193c67bdfa25eae944198854b855, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8350082703119056602, guid: f500193c67bdfa25eae944198854b855, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.55
