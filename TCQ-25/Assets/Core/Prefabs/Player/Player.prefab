@@ -9942,13 +9942,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6206e09ce5dca04a81d1e79ac78eff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   maxHealth: 10
   currentHealth: 10
   moveInput: {x: 0, y: 0}
   _crouchSlow: 0.7
   _speed: 250
   _jumpForce: 15
+=======
+  _rb: {fileID: 0}
+  maxHealth: 0
+  _baseSpeed: 250
+  _baseJumpForce: 15
+>>>>>>> Stashed changes
   _impulseJump: 6
+  _crouchSlow: 0.7
   _isGrounded: 1
   soundScript: {fileID: 8087220188291708262}
   _isFacingRight: 1
@@ -9963,7 +9971,6 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 6ab787c315f1211458f57c498c2adb8c, type: 2}
   - {fileID: 9100000, guid: f30fd5bf5c77f484fa1681dee463f912, type: 2}
   _currentAnimator: {fileID: 0}
-  currentModeState: 0
 --- !u!212 &6576585063858561879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10383,6 +10390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35da324c83fb03b4c988d0143f983639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   player: {fileID: 0}
   _animators:
   - {fileID: 9100000, guid: 176254af4b20e164e95ec750ffb76b52, type: 2}
@@ -10393,6 +10401,30 @@ MonoBehaviour:
   _particle:
   - {fileID: 2873074097446182220}
   - {fileID: 8359428920298303993}
+=======
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+>>>>>>> Stashed changes
 --- !u!1 &6666030091498630521
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,12 +3,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [Header("Player Status")]
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private int currentHealth = 3;
     //variaveis
     [Header("Movimentacao")]
     [SerializeField] private Vector2 moveInput;
+=======
+    [Header("Componentes")]
+    [SerializeField] private Rigidbody2D _rb;
+    
+    [Header("Estatísticas")]
+    [SerializeField] private int maxHealth;
+    public  float _baseSpeed = 1000f;
+    public  float _baseJumpForce = 15f;
+    [SerializeField] private float _impulseJump = 2f;
+>>>>>>> Stashed changes
     [SerializeField] private float _crouchSlow = 0.7f;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
@@ -63,7 +74,16 @@ public class PlayerController : MonoBehaviour
     //Metodos da Unity
     void Awake()
     {
+<<<<<<< Updated upstream
         
+=======
+        if (_rb == null) _rb = GetComponent<Rigidbody2D>();
+        if (_currentAnimator == null) _currentAnimator = GetComponent<Animator>();
+        Debug.Log($"base velocidade inicio:{_baseSpeed}");
+        Speed = _baseSpeed;
+        Debug.Log($"velocidade inico:{Speed}");
+        JumpForce = _baseJumpForce;
+>>>>>>> Stashed changes
         CurrentHealth = maxHealth;
     }
     void Start()
@@ -85,7 +105,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< Updated upstream
        
+=======
+        Debug.Log($"base velocidade fixed: {_baseSpeed}");
+        Debug.Log($"velocidade fixed: {Speed}");
+>>>>>>> Stashed changes
         if (!_isBeingHit)
         {
             Move();
